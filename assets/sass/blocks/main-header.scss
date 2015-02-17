@@ -1,4 +1,6 @@
 .main-header {
+    padding: 15px 0;
+    border-bottom: 1px solid #E2E2E2;
     .cart-display-mobile {
         float: right;
         @include bp(md) {
