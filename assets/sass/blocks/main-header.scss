@@ -1,0 +1,39 @@
+.main-header {
+    .small-menu {
+        @include clear-list-inline;
+        float: left;
+        font-size: rem(23);
+        font-family: PT Sans Narrow;
+        .small-menu-item {
+            a {
+                color: #969696;
+                text-decoration: none;
+            } // a
+        } // small-menu-item
+        .small-menu-item + .small-menu-item {
+            margin-left: 20px;
+        } // small-menu-item + small-menu-item
+    } // small-menu
+    .currency {
+        @include clear-list-inline;
+        float: right;
+        font-size: rem(23);
+        font-family: PT Sans Narrow;
+        .currency-item {
+            color: #969696;
+            opacity: .5;
+            margin-left: 40px;
+            &.active {
+                opacity: 1;
+                &:before {
+                    content: '\f00c';
+                    font: normal normal normal 14px/1 FontAwesome;
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased;
+                    color: #00A2E2;
+                    margin-right: 5px;
+                } // &:before
+            } // &.active
+        } // currency-item
+    } // curency
+} // main-header
