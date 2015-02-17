@@ -119,12 +119,20 @@ module.exports = function(grunt) {
             }
         },
 
+        connect: {
+            server: {
+                keepalive: true,
+                post: 8000,
+                base: './'
+            }
+        }
+
     });
 
     require('load-grunt-tasks')(grunt);
 
     grunt.registerTask('build', ['copy', 'concat', 'imagemin', 'sass', 'autoprefixer', 'uglify', 'cssmin']);
-    grunt.registerTask('run', ['copy', 'concat', 'imagemin', 'sass', 'autoprefixer', 'uglify', 'cssmin', 'watch']);
+    grunt.registerTask('run', ['connect', 'copy', 'concat', 'imagemin', 'sass', 'autoprefixer', 'uglify', 'cssmin', 'watch']);
     grunt.registerTask('default', ['run'])
 
 };
