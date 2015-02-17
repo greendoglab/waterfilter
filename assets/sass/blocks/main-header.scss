@@ -9,6 +9,34 @@
         @include bp(lg) {
             display: none;
         } // lg
+        .cart-display-link {
+            text-decoration: none;
+            display: block;
+            padding-left: 30px;
+            .cart-count {
+                box-sizing: border-box;
+                border-radius: 100%;
+                width: 34px;
+                height: 34px;
+                background: #1B5191;
+                color: white;
+                text-align: center;
+                position: relative;
+                padding-top: 4px;
+                &:before {
+                    content: '\f07a';
+                    font: normal normal normal 20px/1 FontAwesome;
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased;
+                    color: #c1c1c1;
+                    margin-right: 5px;
+                    position: absolute;
+                    left: -26px;
+                    top: 7px;
+                    width: 14px;
+                } // &:before
+            } // cart-count
+        } // cart-display-link
     } // cart-display-mobile
     .currency-mobile {
         float: right;
