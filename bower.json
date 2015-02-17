@@ -1,0 +1,11 @@
+{
+  "name": "waterfilter",
+  "description": "markup for waterfilter shop",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "normalize.css": "~3.0.2",
+    "jquery": "~2.1.3",
+    "fontawesome": "~4.3.0"
+  }
+}
