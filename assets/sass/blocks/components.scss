@@ -13,3 +13,17 @@
         padding: 0;
     } // lg
 } // wrap
+
+.custom-select {
+    background-color: transparent;
+    position: relative;
+    @include inline-middle;
+    cursor: pointer;
+    select {
+        cursor: pointer;
+        background: transparent;
+        -webkit-appearance: none;
+        border: none;
+        outline: 0;
+    } // select
+} // custom-select

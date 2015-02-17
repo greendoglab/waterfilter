@@ -46,6 +46,24 @@
         @include bp(lg) {
             display: none;
         } // lg
+        .currency-select-mobile {
+            border-radius: 3px;
+            color: #565656;
+            font-size: rem(23);
+            font-family: PT Sans Narrow;
+            margin-top: 4px;
+            &:before {
+                content: '\f00c';
+                font: normal normal normal 14px/1 FontAwesome;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                color: #00A2E2;
+                margin-right: 5px;
+                margin-left: 20px;
+                position: relative;
+                top: -3px;
+            } // &:before
+        } // currency-select-mobile
     } // currency-mobile
     .small-menu {
         @include clear-list-inline;
@@ -101,6 +119,7 @@
             color: #969696;
             opacity: .5;
             margin-left: 20px;
+            cursor: pointer;
             &.active {
                 opacity: 1;
                 &:before {
@@ -110,6 +129,8 @@
                     -webkit-font-smoothing: antialiased;
                     color: #00A2E2;
                     margin-right: 5px;
+                    position: relative;
+                    top: -3px;
                 } // &:before
             } // &.active
         } // currency-item
