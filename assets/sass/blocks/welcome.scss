@@ -23,4 +23,100 @@
             display: block;
         } // sm
     } // baner
+    .info {
+        float: right;
+        color: #c1c1c1;
+        width: 200px;
+        padding: 20px 10px;
+        .info-block {
+            font-size: rem(14);
+            line-height: 16px;
+            display: block;
+            @include clearfix;
+            ul {
+                @include clear-list;
+                li {
+                    margin-left: 40px;
+                } // li
+                li + li {
+                    margin-top: 5px;
+                } // +
+            } // ul
+        } // info-block
+        .phones {
+            margin-bottom: 10px;
+            display: block;
+            &:before {
+                content: '\f095';
+                font: normal normal normal 14px/1 FontAwesome;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                color: #c1c1c1;
+                float: left;
+            } // &:before
+        } // phones
+        .email {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            display: block;
+            border-bottom: 1px solid #E2E2E2;
+            &:before {
+                content: '\f0e0';
+                font: normal normal normal 14px/1 FontAwesome;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                color: #c1c1c1;
+                position: relative;
+                top: 13px;
+            }  // &:before
+        } // email
+        .cart {
+            margin-bottom: 20px;
+            display: block;
+            .cart-display-link {
+                @include clearfix;
+                text-decoration: none;
+                display: block;
+                .cart-count {
+                    box-sizing: border-box;
+                    border-radius: 100%;
+                    width: 34px;
+                    height: 34px;
+                    background: #1B5191;
+                    color: white;
+                    text-align: center;
+                    position: relative;
+                    padding-top: 9px;
+                    padding-right: 12px;
+                    top: 10px;
+                    left: 30px;
+                    float: left;
+                    &:before {
+                        content: '\f07a';
+                        font: normal normal normal 14px/1 FontAwesome;
+                        text-rendering: auto;
+                        -webkit-font-smoothing: antialiased;
+                        color: #c1c1c1;
+                        position: relative;
+                        left: -30px;
+                    } // &:before
+                } // cart-count
+                .cart-info {
+                    float: right;
+                    color: #c1c1c1;
+                    span {
+                        display: block;
+                    } // span
+                    .text-cart {
+                        color: #484848;
+                        font-size: rem(18);
+                    } // text-cart
+                    .sum {
+                        font-weight: bold;
+                        color: #266AAC;
+                    } // sum
+                } // cart-info
+            } // cart-display-link
+        } // cart
+    } // info
 } // welcome
