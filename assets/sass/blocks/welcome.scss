@@ -2,10 +2,25 @@
     .logo {
         background: url(/static/images/logo.png);
         margin: 20px 20px 20px 0;
-        background-repeat: no-repeat;
         width: 167px;
         height: 167px;
         float: left;
         background-size: cover;
     } // logo
+    .baner {
+        background: url(/static/images/baner.png);
+        background-size: cover;
+        background-position: 50% 50%;
+        width: 546px;
+        height: 173px;
+        float: left;
+        margin: 20px 0;
+        display: none;
+        @include bp(md) {
+            display: block;
+        } // sm
+        @include bp(lg) {
+            display: block;
+        } // sm
+    } // baner
 } // welcome
