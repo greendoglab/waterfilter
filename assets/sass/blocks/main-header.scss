@@ -3,6 +3,9 @@
     border-bottom: 1px solid #E2E2E2;
     .cart-display-mobile {
         float: right;
+        @include bp(sm) {
+            display: none;
+        } // sm
         @include bp(md) {
             display: none;
         } // md
