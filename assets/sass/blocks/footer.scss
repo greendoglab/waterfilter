@@ -1,12 +1,48 @@
 .footer {
     .service {
         padding: 20px 0;
-        height: 125px;
+        @include clearfix;
+        .wrap {
+            @include clearfix;
+            box-sizing: border-box;
+            width: 100%;
+            padding: 0 5%;
+            margin: auto;
+        }
         .block-service {
-            @include inline-top;
-            padding: 0;
-            margin: 0;
-            width: 24%;
+            box-sizing: border-box; 
+            float: none;
+            width: 75%;
+            padding-left: 70px;
+            margin: 0 auto;
+            display: block;
+            background-repeat: no-repeat;
+            background-size: 50px;
+            @include bp(sm) {
+                float: left;
+                width: 50%;
+                border-left: 1px solid #979797;
+                border-bottom: 1px solid #979797;
+                padding: 10px 0 10px 140px;
+                background-position: 80px 10px;
+                &:nth-child(odd) {
+                    border-left: none;
+                }
+                &:nth-last-child(1) {
+                    border-bottom: none;
+                }
+                &:nth-last-child(2) {
+                    border-bottom: none;
+                }
+            } // sm
+            @include bp(md) {
+                float: left;
+                width: 25%;
+            } // md
+            @include bp(lg) {
+                float: left;
+                width: 25%;
+            } // lg
             &.car {
                 background-image: url(/static/images/Icon-car.png);
             } // &.car
@@ -19,14 +55,11 @@
             &.key {
                 background-image: url(/static/images/Icon-key.png);
             } // &.key
-            background-repeat: no-repeat;
-            background-size: 25%;
-            h1 {
+            h4 {
+                font-family: 'PT Sans Narrow';
                 font-size: rem(24);
                 color: #484848;
                 line-height: 32px;
-                position: relative;
-                left: 65px;
                 margin: 0;
             } // h1
             span {
@@ -34,9 +67,6 @@
                 color: #969696;
                 display: block;
                 line-height: 16px;
-                font-weight: bold;
-                position: relative;
-                left: 65px;
             } // span
         } // block-service
     } // service
