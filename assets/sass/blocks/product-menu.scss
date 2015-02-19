@@ -1,0 +1,41 @@
+.product-menu {
+    background-color: #00A2E2;
+    width: 100%;
+    display: none;
+    @include bp (md) {
+        display: block;
+    } // md
+    @include bp (lg) {
+        display: block;
+    } // lg
+    text-align: center;
+    vertical-align: middle;
+    .menu {
+        @include clear-list-inline;
+        li {
+            &.lens {
+                display: block;
+                float: right;
+                background-color: #A0D4E9;
+                a {
+                    color: #2A609F;
+                    &:before {
+                        content: '\f002';
+                        font: normal normal normal 22px/1 FontAwesome;
+                        text-rendering: auto;
+                        -webkit-font-smoothing: antialiased;    
+                    } // &:before
+                } // a
+            } // &.lens
+            a {
+                display: block;
+                text-decoration: none;
+                color: white;
+                font-size: rem(20);
+                line-height: 26px;
+                font-family: PT Sans Narrow;
+                padding: 10px 30px;
+            } // a
+        } // li
+    } // menu
+} // product-menu
