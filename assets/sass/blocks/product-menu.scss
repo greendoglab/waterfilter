@@ -2,21 +2,73 @@
     background-color: #00A2E2;
     width: 100%;
     display: none;
+    vertical-align: middle;
+    @include bp (sm) {
+        display: block;
+    } // sm
     @include bp (md) {
         display: block;
     } // md
     @include bp (lg) {
         display: block;
     } // lg
-    text-align: center;
-    vertical-align: middle;
     .menu {
         @include clear-list-inline;
+        padding-right: 60px;
+        position: relative;
         li {
+            width: 20%;
+            float: left;
+            text-align: center;
+            @include bp (sm) {
+                display: none;
+            } // sm
+            @include bp (md) {
+                @include clear-list-inline;
+            } // md
+            @include bp (lg) {
+                @include clear-list-inline;
+            } // lg
+            &.bar-icon {
+                display: none;
+                @include inline-middle;
+                cursor: pointer;
+                float: left;
+                a {
+                    display: none;
+                    color: white;
+                    text-decoration: none;  
+                    font-size: rem(20);
+                    line-height: 26px;
+                    font-family: PT Sans Narrow;
+                    &:before {
+                        content: '\f0c9';
+                        font: normal normal normal 23px/1 FontAwesome;
+                        text-rendering: auto;
+                        -webkit-font-smoothing: antialiased;
+                        padding-right: 20px;
+                    } // &:before
+                    @include bp (sm) {
+                        display: block;
+                    } // sm
+                    @include bp (md) {
+                        display: none;
+                    } // md
+                    @include bp (lg) {
+                        display: none;
+                    } // lg
+                } // a
+            } // bar-icon
             &.lens {
                 display: block;
-                float: right;
+                width: 60px;
+                position: absolute;
+                right: 0px;
+                top: 0px;
                 background-color: #A0D4E9;
+                @include bp (sm) {
+                    display: block;
+                } // sm
                 a {
                     color: #2A609F;
                     &:before {
@@ -34,7 +86,7 @@
                 font-size: rem(20);
                 line-height: 26px;
                 font-family: PT Sans Narrow;
-                padding: 10px 30px;
+                padding: 10px 20px;
             } // a
         } // li
     } // menu
