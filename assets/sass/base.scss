@@ -2,7 +2,7 @@ $text-color: #303030;
 $link-color: #3498db;
 
 body {
-    font-size: rem(18);    
+    font-size: rem(18);
     line-height: 150%;
     background: #fff;
     font-family: Helvetica, Arial, serif;
@@ -13,6 +13,12 @@ body {
     &.open-menu {
         overflow: hidden;
     } // &.open-menu
+    @include bp(xs) {
+        font-size: rem(22);
+    } // xs
+    @include bp(sm) {
+        font-size: rem(22);
+    } // sm
     @include bp(md) {
         font-size: rem(22);
     } // md
