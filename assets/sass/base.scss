@@ -13,6 +13,12 @@ body {
     &.open-menu {
         overflow: hidden;
     } // &.open-menu
+    @include bp(xs) {
+        font-size: rem(22);
+    } // xs
+    @include bp(sm) {
+        font-size: rem(22);
+    } // sm
     @include bp(md) {
         font-size: rem(22);
     } // md
