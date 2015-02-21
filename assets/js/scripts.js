@@ -14,8 +14,8 @@
             viewContainer.filter(function() {
                 return $(this).data('view') === typeView;
             }).fadeIn();
-            viewTrigger.removeClass('active');
-            $(this).addClass('active');
+            viewTrigger.find('.filter').removeClass('active');
+            $(this).find('.filter').addClass('active');
             return false;
         }).filter(':first').click();
     }
