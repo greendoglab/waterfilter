@@ -77,6 +77,16 @@
             &:nth-child(4n+1) {
                 clear: both;
             } // &:nth-child(4n+1)
+            @include bp(xs) {
+                width: 100%;
+                float: none;
+            } // xs
+            @include bp(sm) {
+                width: 50%;
+                &:nth-child(2n+1) {
+                    clear: both;
+                } // &:nth-child(2n+1)
+            } // sm
             .product {
                 display: block;
                 // fallback for anchor
