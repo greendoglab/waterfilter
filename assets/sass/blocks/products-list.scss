@@ -14,51 +14,58 @@
             @include inline-middle;
             @include clear-list-inline;
             li + li {
-                margin-left: 20px;
+                margin-left: 10px;
             } // li + li
             li {
                 &:nth-child(1) {
                     margin-right: 10px;
                 } // &:nth-child(1)
-                span {
+                span.filter-button {
+                    @include inline-middle;
                     font-size: rem(18);
                     color: #979797;
                     line-height: 1;
                     cursor: pointer;
-                } // sspan
-                span.filter {
-                    @include inline-middle;
-                    background-size: 100% !important;
-                    background-repeat: no-repeat !important;
-                    background-position: 50% 50% !important;
-                    height: 12px;
-                    opacity: 0.5;
-                    &.active {
-                        position: relative;
-                        opacity: 1;
-                        &:before {
-                            content: "\f00c";
-                            transform: scale(0.5, 0.5);
-                            font: normal normal normal 14px/1 FontAwesome;
-                            font-size: inherit;
-                            text-rendering: auto;
-                            -webkit-font-smoothing: antialiased;
-                            -moz-osx-font-smoothing: grayscale;
-                            color: #00A2E2;
-                            position: absolute;
-                            top: -2px;
-                            left: -18px;
-                        } // &:before
-                    } // &.active
-                    &.show-grid {
-                        width: 12px;
-                        background: url(../images/grid-view.png);
-                    } // show-grid
-                    &.show-list {
-                        width: 23px;
-                        background: url(../images/list-view.png);
-                    } // show-list
-                } // span.filter
+                    width: 25px;
+                    padding: 3px;
+                    text-align: center;
+                    &.freewidth {
+                        width: auto;
+                    } // &.freewidth
+                    span.filter {
+                        @include inline-middle;
+                        background-size: 100% !important;
+                        background-repeat: no-repeat !important;
+                        background-position: 50% 50% !important;
+                        height: 12px;
+                        opacity: 0.5;
+                        &.active {
+                            position: relative;
+                            opacity: 1;
+                            &:before {
+                                content: "\f00c";
+                                transform: scale(0.5, 0.5);
+                                font: normal normal normal 14px/1 FontAwesome;
+                                font-size: inherit;
+                                text-rendering: auto;
+                                -webkit-font-smoothing: antialiased;
+                                -moz-osx-font-smoothing: grayscale;
+                                color: #00A2E2;
+                                position: absolute;
+                                top: -2px;
+                                left: -18px;
+                            } // &:before
+                        } // &.active
+                        &.show-grid {
+                            width: 12px;
+                            background: url(../images/grid-view.png);
+                        } // show-grid
+                        &.show-list {
+                            width: 23px;
+                            background: url(../images/list-view.png);
+                        } // show-list
+                    } // span.filter
+                } // span.filter-button
             } // li
         } // ul
     } // filter-line
