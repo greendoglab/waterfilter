@@ -1,0 +1,34 @@
+.large-baner {
+    margin-bottom: 40px;
+    .baner-back {
+        text-decoration: none;
+        display: block;
+        position: relative;
+        .prev, .next {
+            color: white;
+            position: absolute;
+            top: 120px;
+            z-index: 3;
+            cursor: pointer;
+            &:before {
+                font-family: FontAwesome;
+                font-size: rem(60);
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            } // &:before
+        } // prev, next
+        .prev {
+            left: 30px;
+            &:before {
+                content: '\f104';
+            } // &:before
+        } // prev
+        .next {
+            right: 30px;
+            &:before {
+                content: '\f105';
+            } // &:before
+        } // next
+    }  // baner-back
+} // large-baner
