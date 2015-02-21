@@ -65,17 +65,73 @@
 } // with-filters
 
 .products-list-box {
+    margin-bottom: 20px;
     .products-list {
         @include clear-list-inline;
+        margin: 0 -10px;
         .product-box {
             float: left;
             width: 25%;
+            box-sizing: border-box;
+            padding: 8px 12px;
             &:nth-child(4n+1) {
                 clear: both;
             } // &:nth-child(4n+1)
             .product {
-                &.product-grid {} // product-grid
+                display: block;
+                // fallback for anchor
+                text-decoration: none;
+                &.product-grid {
+                    border: 1px solid #979797;
+                    border-radius: 2px;
+                    padding: 20px;
+                    &:hover {
+                        border: 1px solid #63B9E5;
+                    } // &:hover
+                } // product-grid
                 &.product-list {} // product-list
+                .title {
+                    font-family: 'PT Sans Narrow';
+                    font-size: rem(20);
+                    color: #000000;
+                    line-height: 1;
+                    margin: 0;
+                    margin-bottom: 20px;
+                } // title
+                .description {
+                    color: #5C5C5C;
+                    font-size: rem(16);
+                    line-height: 1;
+                    margin-bottom: 20px;
+                    &.elipsis-box {
+                        .elipsis {
+                            @include elipsis;
+                        } // elipsis
+                    } // &.elipsis-box
+                } // description
+                .img-box {
+                    margin-bottom: 20px;
+                } // img-box
+                .price-tag {
+                    text-align: center;
+                    margin: 20px 0;
+                    .price, .currency {
+                        @include inline-middle;
+                    } // price, currency
+                    .price {
+                        font-size: rem(32);
+                        color: #417505;
+                        line-height: 1;
+                    } // price
+                    .currency {
+                        font-size: rem(20);
+                        color: #000000;
+                        line-height: 1;
+                    } // currency
+                } // price-tag
+                .add-to-cart-box {
+                    text-align: center;
+                } // add-to-cart-box
             } // product
         } // product-box
     } // products-list
