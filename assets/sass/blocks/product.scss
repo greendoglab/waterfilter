@@ -1,0 +1,100 @@
+.breadcrumps {
+    margin: 20px 0 40px 0;
+    ul {
+        @include clear-list-inline;
+        li + li {
+            &:before {
+                @include clear-list-inline;
+                content: '\f0da';
+                font: normal normal normal 12px/1 FontAwesome;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            } // &.before
+        } // li + li
+        li {
+            a {
+                color: #1B5191;
+                font-size: rem(12);
+                text-transform: uppercase;
+            } // a
+            span {
+                color: #5C5C5C;
+                font-size: rem(14);
+            } // span
+        } // li
+    } // ul
+} // breadcrumps
+
+.product {
+    .gray-box {
+        background: #F2F2F2;
+        padding-bottom: 20px;
+    } // gray-box
+    .product-main {
+        @include table;
+        .images-box {
+            @include table-cell;
+            @include clearfix;
+            width: 340px;
+            .image-previews {
+                @include clear-list;
+                float: left;
+                width: 80px;
+                li + li {
+                    margin-top: 15px;
+                } // li + li
+                .image-preview {
+                    border: 1px solid #979797;
+                    padding: 10px;
+                    &.active {
+                        border: 1px solid #00A2E2;
+                    } // &.active
+                } // image-preview
+            } // image-previews
+            .product-image {
+                float: right;
+                width: 220px;
+                padding-right: 20px;
+            } // product-image
+        } // images-box
+        .info-box {
+            @include table-cell;
+            padding-left: 20px;
+            .product-title {
+                font-family: 'PT Sans Narrow';
+                font-size: rem(34);
+                color: #2E2E2E;
+                line-height: 1;
+                margin: 0;
+            } // product-title
+            .price-line {
+                border-top: 1px solid gray;
+                padding-top: 20px;
+                margin-top: 20px;
+                margin-bottom: 40px;
+                line-height: 1;
+                .in-stock {
+                    @include inline-middle;
+                    font-size: rem(16);
+                    color: #20648C;
+                } // in-stock
+                .price {
+                    @include inline-middle;
+                    font-size: rem(32);
+                    color: #417505;
+                } // price
+                .currency {
+                    @include inline-middle;
+                    font-size: rem(20);
+                    color: #000000;
+                } // currency
+            } // price-line
+            .descriptionription {
+                font-size: rem(16);
+                line-height: 1.2;
+                color: #5C5C5C;
+            } // descriptionription
+        } // info-box
+    } // product-main
+} // product
