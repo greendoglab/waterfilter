@@ -184,6 +184,24 @@
                         <span class="currency">грн.</span>
                         <button class="button button-blue add-to-cart">Купить</button>
                     </div>
+                    <!-- images-box-mobile -->
+                    <figure class="images-box-mobile">
+                        <div class="product-image">
+                            <img src="/static/images/tmp/product.png" alt="">
+                        </div>
+                        <ul class="image-previews">
+                            <li class="image-preview active">
+                                <img src="/static/images/tmp/product-preview.png" alt="">
+                            </li>
+                            <li class="image-preview">
+                                <img src="/static/images/tmp/product-preview.png" alt="">
+                            </li>
+                            <li class="image-preview">
+                                <img src="/static/images/tmp/product-preview.png" alt="">
+                            </li>
+                        </ul>
+                    </figure>
+                    <!-- /images-box-mobile -->
                     <article class="descriptionription">
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dapibus urna sit amet tincidunt scelerisque.
@@ -202,26 +220,41 @@
         </div>
     </div>
     <!-- /gray-box -->
+    <div class="wrap">
+        <!-- descriptionription-mobile -->
+         <article class="descriptionription-mobile">
+             <p>
+                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dapibus urna sit amet tincidunt scelerisque.
+             </p>
+             <p>
+                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dapibus urna sit amet tincidunt scelerisque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dapibus urna sit amet tincidunt scelerisque.
+             </p>
+             <p>
+                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque dapibus urna sit amet tincidunt scelerisque.
+             </p>
+         </article>
+         <!-- /descriptionription-mobile -->
+    </div>
     <!-- characteristics -->
     <div class="characteristics">
+        <div class="wrap list">
+            <!-- char-tabs -->
+            <ul class="char-tabs">
+                <li class="active" data-role="products-chars-trigger" data-view="chars">
+                    <span>Характеристики</span>
+                </li>
+                <li data-role="products-chars-trigger" data-view="description">
+                    <span>Полное описание</span>
+                </li>
+            </ul>
+            <!-- /char-tabs -->
+        </div>
         <div class="wrap">
-            <div class="char-tabs-box">
-                <!-- char-tabs -->
-                <ul class="char-tabs">
-                    <li data-view="chars">
-                        <span>Характеристики</span>
-                    </li>
-                    <li data-view="description">
-                        <span>Полное описание</span>
-                    </li>
-                </ul>
-                <!-- /char-tabs -->
-                <div class="char-container" data-view="chars">
-                    Характеристики
-                </div>
-                <div class="char-container" data-view="description">
-                    Полное описание
-                </div>
+            <div class="char-container" data-role="products-chars" data-view="chars">
+                Характеристики
+            </div>
+            <div class="char-container" data-role="products-chars" data-view="description">
+                Полное описание
             </div>
         </div>
     </div>

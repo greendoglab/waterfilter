@@ -20,9 +20,30 @@
         }).filter(':first').click();
     }
 
+    // ProductChars
+    function ProductChars() {
+        var viewContainer = $('[data-role="products-chars"]');
+        var viewTrigger = $('[data-role="products-chars-trigger"]');
+
+        viewContainer.hide();
+        viewContainer.filter(':first').show();
+
+        viewTrigger.click(function() {
+            typeView = $(this).data('view');
+            viewContainer.hide();
+            viewContainer.filter(function() {
+                return $(this).data('view') === typeView;
+            }).fadeIn();
+            viewTrigger.removeClass('active');
+            $(this).addClass('active');
+            return false;
+        }).filter(':first').click();
+    }
+
     // document ready
     $(window).on('load', function() {
         ProductsViewType();
+        ProductChars();
     });
 
     // all initial on window resize
