@@ -62,6 +62,7 @@
 
 @mixin bp($point) {
     $bp-xs: "(max-width : 480px)";
+    $bp-xs-helpdesk: "(min-width : 480px) and (max-width : 768px)";
     $bp-sm: "(min-width : 768px) and (max-width : 992px)";
     $bp-md: "(min-width : 992px) and (max-width : 1200px)";
     $bp-lg: "(min-width : 1200px)";
@@ -69,6 +70,7 @@
     // extrasmall – mobile
     @if $point == xs {
         @media #{$bp-xs} { @content; }
+        @media #{$bp-xs-helpdesk} { @content; }
     }
     // small – (not only mobile)
     @if $point == sm {
