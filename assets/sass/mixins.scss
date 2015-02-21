@@ -60,6 +60,13 @@
     box-sizing: border-box;
 }
 
+@mixin elipsis {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 @mixin bp($point) {
     $bp-xs: "(max-width : 480px)";
     $bp-xs-helpdesk: "(min-width : 480px) and (max-width : 768px)";
