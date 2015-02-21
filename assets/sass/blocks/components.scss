@@ -27,3 +27,13 @@
         outline: 0;
     } // select
 } // custom-select
+
+.view-title-box {
+    margin: 20px 0;
+    .view-title {
+        font-family: 'PT Sans Narrow';
+        font-size: rem(28);
+        color: #000000;
+        line-height: 1;
+    } // view-title-box
+} // view-title-box
