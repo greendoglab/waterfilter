@@ -64,6 +64,19 @@
     } // filter-line
 } // with-filters
 
-.products-list {
-
-} // products-list
+.products-list-box {
+    .products-list {
+        @include clear-list-inline;
+        .product-box {
+            float: left;
+            width: 25%;
+            &:nth-child(4n+1) {
+                clear: both;
+            } // &:nth-child(4n+1)
+            .product {
+                &.product-grid {} // product-grid
+                &.product-list {} // product-list
+            } // product
+        } // product-box
+    } // products-list
+} // products-list-box
