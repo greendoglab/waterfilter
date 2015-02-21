@@ -5,8 +5,6 @@
         var viewContainer = $('[data-role="products-view"]');
         var viewTrigger = $('[data-role="products-view-trigger"]');
 
-        // console.log(viewContainer.filter(':first').data('role'))
-
         viewContainer.hide();
         viewContainer.filter(':first').show();
 
