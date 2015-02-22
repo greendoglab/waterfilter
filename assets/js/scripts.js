@@ -175,13 +175,20 @@
         });
     }
 
+    // phone mask
+    function phoneMask() {
+        var phoneInput = $('[data-role="phone-mask"]');
+        phoneInput.mask("(000) 000-00-00", {placeholder: "(099) 999-99-99"});
+    }
+
     // document ready
     $(window).on('load', function() {
         ProductsViewType();
         ProductChars();
         ProductImage();
         cartItemCountUpdate();
-        oneClickOrder()
+        oneClickOrder();
+        phoneMask();
         CartDisplay();
     });
 
