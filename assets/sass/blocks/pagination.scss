@@ -7,17 +7,18 @@
     width: 480px;
     margin: auto;
     padding: 40px 0;
+    .pressbutton + .pressbutton {
+        border-left: none;
+    } // .pressbutton + .pressbutton
     .pressbutton {
-        padding: 13px 0 0 0;
         margin: 0;
-        width: 60px;
-        height: 60px;
+        padding: 0;
+        box-sizing: border-box;
         border: 1px solid #979797;
         font-family: Arial;
         font-size: rem(20);
         float: left;
         text-align: center;
-        box-sizing: border-box;
         &.control {
             border: 1px solid transparent;
             a {
@@ -32,6 +33,11 @@
             } // a
         } // &.active
         a {
+            display: block;
+            width: 58px;
+            height: 60px;
+            padding: 13px 0 0 0;
+            box-sizing: border-box;
             text-decoration: none;
             color: #979797;
         } // a
