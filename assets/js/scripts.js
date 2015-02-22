@@ -1,5 +1,14 @@
 (function($) {
 
+    // functions
+    function classCheck(elem, classname) {
+        if (!elem.hasClass(classname)) {
+            elem.addClass(classname);
+        } else {
+            elem.removeClass(classname);
+        }
+    }
+
     // ProductsViewType
     function ProductsViewType() {
         var viewContainer = $('[data-role="products-view"]');
@@ -64,14 +73,19 @@
 
         var cartDisplay = $('[data-role="cart-display"]');
         var cartTrigger = $('[data-role="cart-display-trigger"]');
+        var cartTriggerMobile = $('[data-role="cart-display-trigger-mobile"]');
+        var cartTriggerCount = $('[data-role="cart-display-trigger-count"]');
+        var mainHeader = $('[data-role="main-header"]');
 
+        triggerHeight = cartTrigger.height();
+        triggerWidth = cartTrigger.width();
+
+        triggerPosition = cartTrigger.position();
+
+        cartDisplayWidth = cartDisplay.width();
+
+        // position & styles
         if (window.matchMedia('(min-width : 768px)').matches) {
-            triggerHeight = cartTrigger.height();
-            triggerWidth = cartTrigger.width();
-
-            triggerPosition = cartTrigger.position();
-
-            cartDisplayWidth = cartDisplay.width();
 
             topForCartDisplay = (triggerHeight + triggerPosition.top + 20);
             leftForCartDisplay = (triggerPosition.left + triggerWidth)
@@ -83,8 +97,23 @@
             });
         } else {
             cartDisplay.removeAttr('style');
-            // cartDisplay.css({});
+            cartDisplay.css({
+                'top': mainHeader.outerHeight()
+            });
         }
+
+        // Behavior
+        cartTrigger.click(function() {
+            classCheck(cartDisplay, 'opened');
+            classCheck(cartTriggerMobile, 'active');
+            classCheck($(this), 'active');
+        });
+
+        cartTriggerMobile.click(function() {
+            classCheck(cartDisplay, 'opened');
+            classCheck(cartTrigger, 'active');
+            classCheck($(this), 'active');
+        });
     }
 
     // document ready
