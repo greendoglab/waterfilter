@@ -117,6 +117,7 @@
     }
 
     // Cart behavior
+    // Count items
     function cartItemCountUpdate() {
         var item = $('[data-role="cart-item"]')
 
@@ -157,6 +158,22 @@
             });
         });
     }
+    // Show/hide oneclick install
+    function oneClickOrder() {
+        var cartDisplay = $('[data-role="cart-items"]');
+        var orderDisplay = $('[data-role="cart-order"]');
+        var trigger = $('[data-role="trigger-one-click"]');
+        var triggerHide = $('[data-role="trigger-one-click-hide"]');
+
+        trigger.click(function() {
+            cartDisplay.hide();
+            orderDisplay.fadeIn();
+        });
+        triggerHide.click(function() {
+            orderDisplay.hide();
+            cartDisplay.fadeIn();
+        });
+    }
 
     // document ready
     $(window).on('load', function() {
@@ -164,6 +181,7 @@
         ProductChars();
         ProductImage();
         cartItemCountUpdate();
+        oneClickOrder()
         CartDisplay();
     });
 

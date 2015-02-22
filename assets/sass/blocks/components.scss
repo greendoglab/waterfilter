@@ -49,6 +49,9 @@
     outline: none;
     border-radius: 2px;
     border-bottom: 2px solid transparent;
+    &.button-transparent {
+        background: transparent;
+    } // &.button-transparent
     &.button-blue {
         background: #3498DB;
         color: white;
@@ -93,3 +96,19 @@
         } // &.oneclick
     } // &.button-blue
 } // button
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    box-sizing: border-box;
+    border-color: transparent;
+    border-bottom: 1px solid #979797;
+}
+
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border-color: transparent;
+    border-bottom: 1px solid #979797;
+}
