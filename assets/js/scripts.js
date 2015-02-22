@@ -116,11 +116,53 @@
         });
     }
 
+    function cartItemCountUpdate() {
+        var item = $('[data-role="cart-item"]')
+
+        item.each(function() {
+            var input = $(this).find('[data-role="cart-item-count"]');
+            var plus = $(this).find('[data-role="cart-item-count-plus"]');
+            var minus = $(this).find('[data-role="cart-item-count-minus"]');
+            var itemDelete = $(this).find('[data-role="cart-item-count-delete"]');
+
+            minus.hide();
+            itemDelete.show();
+
+            plus.click(function() {
+                var inputValue = parseInt(input.val());
+                function update() {
+                    inputValueUpdated = parseInt((inputValue + 1))
+                    if (inputValueUpdated > 1) {
+                        console.log('aaaaa');
+                        minus.show();
+                        itemDelete.hide();
+                    }
+                }
+                update();
+                input.val(inputValueUpdated);
+            });
+            minus.click(function() {
+                inputValue = parseInt(input.val());
+                function update() {
+                    inputValueUpdated = parseInt((inputValue - 1))
+                    if (inputValueUpdated === 1) {
+                        console.log('minus');
+                        minus.hide();
+                        itemDelete.show();
+                    }
+                }
+                update();
+                input.val(inputValueUpdated);
+            });
+        });
+    }
+
     // document ready
     $(window).on('load', function() {
         ProductsViewType();
         ProductChars();
         ProductImage();
+        cartItemCountUpdate();
         CartDisplay();
     });
 

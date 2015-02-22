@@ -58,6 +58,12 @@
             } // .cart-item + .cart-item
             .cart-item {
                 @include table;
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
                 .cart-item-cell {
                     @include table-cell;
                     line-height: 1;
@@ -95,20 +101,32 @@
                     &.count-updater {
                         width: 100px;
                         padding-right: 10px;
-                        .plus, .minus, .count {
+                        .count {
                             @include inline-middle;
                             font-size: rem(14);
                             line-height: 1;
-                        } // .plus, .minus, .count
-                        .plus, .minus {
-                            cursor: pointer;
-                            padding: 2px 4px;
-                        } // .plus, .minus,
-                        .count {
                             width: 20px;
                             text-align: center;
                             padding: 5px 4px 3px 4px;
-                        } // .count
+                        } // count
+                        .count-button {
+                            @include inline-middle;
+                            box-sizing: border-box;
+                            line-height: 1;
+                            width: 20px;
+                            height: 20px;
+                            cursor: pointer;
+                            text-align: center;
+                            i {
+                                transform: scale(0.7, 0.7);
+                            } // i
+                            &.remove {
+                                i {
+                                    color: #e74c3c;
+                                    transform: scale(0.7, 0.7) rotate(45deg);
+                                } // i
+                            } // remove
+                        } // count-button
                     } // &.count-updater
                 } // cart-item-cell
             } // cart-item
