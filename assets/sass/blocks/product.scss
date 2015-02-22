@@ -59,6 +59,7 @@
                 .image-preview {
                     border: 1px solid #979797;
                     padding: 10px;
+                    cursor: pointer;
                     &.active {
                         border: 1px solid #00A2E2;
                     } // &.active
