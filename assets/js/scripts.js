@@ -116,6 +116,7 @@
         });
     }
 
+    // Cart behavior
     function cartItemCountUpdate() {
         var item = $('[data-role="cart-item"]')
 
