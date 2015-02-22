@@ -16,6 +16,7 @@
         border-radius: 2px;
         position: relative;
         box-sizing: border-box;
+        padding: 20px;
         @include bp(xs) {
             width: 100%;
             border-top: 1px solid transparent;
@@ -49,5 +50,68 @@
             margin-left: -15px;
             right: 126px;
         } // &:after
+        .cart-items {
+            .cart-item + .cart-item {
+                margin-top: 10px;
+                padding-top: 10px;
+                border-top: 1px solid #E2E2E2;
+            } // .cart-item + .cart-item
+            .cart-item {
+                @include table;
+                .cart-item-cell {
+                    @include table-cell;
+                    line-height: 1;
+                    &.image {
+                        width: 60px;
+                        padding-right: 10px;
+                        img {
+                            max-width: 40px;
+                        } // img
+                    } // &.image
+                    &.name {
+                        width: 160px;
+                        padding-right: 10px;
+                        .item-name {
+                            font-family: 'PT Sans Narrow';
+                            font-size: rem(15);
+                            line-height: 1.2;
+                        } // span
+                    } // &.name
+                    &.price {
+                        width: 100px;
+                        padding-right: 10px;
+                        .price, .currency {
+                            @include inline-middle;
+                        } // price, currency
+                        .price {
+                            font-size: rem(15);
+                            color: #417505;
+                        } // price
+                        .currency {
+                            font-size: rem(15);
+                            color: #000000;
+                        } // currency
+                    } // &.price
+                    &.count-updater {
+                        width: 100px;
+                        padding-right: 10px;
+                        .plus, .minus, .count {
+                            @include inline-middle;
+                            font-size: rem(14);
+                            line-height: 1;
+                        } // .plus, .minus, .count
+                        .plus, .minus {
+                            cursor: pointer;
+                            padding: 2px 4px;
+                        } // .plus, .minus,
+                        .count {
+                            width: 20px;
+                            text-align: center;
+                            padding: 5px 4px 3px 4px;
+                        } // .count
+                    } // &.count-updater
+                } // cart-item-cell
+            } // cart-item
+        } // cart-items
     } // cart-content
 } // cart
