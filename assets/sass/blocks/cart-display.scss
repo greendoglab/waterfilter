@@ -16,6 +16,7 @@
         border-radius: 2px;
         position: relative;
         padding: 20px;
+        box-sizing: border-box;
         @include bp(xs) {
             width: 100%;
             border-top: 1px solid transparent;
@@ -190,10 +191,10 @@
             } // input
         } // inputs
         &.buttons {
-            text-align: right;
+            text-align: center;
         } // &.buttons
         &.required-expl {
-            text-align: right;
+            text-align: center;
             font-size: rem(16);
             color: #737373;
             sup {
