@@ -24,6 +24,16 @@
 </head>
 <body>
 
+<!-- cart-display -->
+<div class="cart-display" data-role="cart-display">
+    <div class="cart-content">
+        background: #FFFFFF;
+        border: 1px solid #57A4FD;
+        border-radius: 2px;
+    </div>
+</div>
+<!-- /cart-display -->
+
 <!-- main-header -->
 <nav class="main-header">
     <div class="wrap">
@@ -101,8 +111,8 @@
                 <!-- /email -->
                 <!-- cart -->
                 <div class="info-block cart">
-                    <a href="#" class="cart-display-link">
-                        <div class="cart-count">2</div>
+                    <a href="#" class="cart-display-link" data-role="cart-display-trigger">
+                        <div class="cart-count" data-role="cart-display-trigger-count">2</div>
                         <span class="cart-info">
                             <span class="text-cart">В корзине</span>
                             <span>товаров на сумму</span>

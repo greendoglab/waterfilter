@@ -60,15 +60,45 @@
         }).filter(':first').click();
     }
 
+    function CartDisplay() {
+
+        var cartDisplay = $('[data-role="cart-display"]');
+        var cartTrigger = $('[data-role="cart-display-trigger"]');
+
+        if (window.matchMedia('(min-width : 768px)').matches) {
+            triggerHeight = cartTrigger.height();
+            triggerWidth = cartTrigger.width();
+
+            triggerPosition = cartTrigger.position();
+
+            cartDisplayWidth = cartDisplay.width();
+
+            topForCartDisplay = (triggerHeight + triggerPosition.top + 20);
+            leftForCartDisplay = (triggerPosition.left + triggerWidth)
+            cartDisplay.removeAttr('style');
+            cartDisplay.css({
+                'top': topForCartDisplay,
+                'left': leftForCartDisplay,
+                'margin-left': -(cartDisplayWidth),
+            });
+        } else {
+            cartDisplay.removeAttr('style');
+            // cartDisplay.css({});
+        }
+    }
+
     // document ready
     $(window).on('load', function() {
         ProductsViewType();
         ProductChars();
         ProductImage();
+        CartDisplay();
     });
 
     // all initial on window resize
-    $(window).on('resize', function() {});
+    $(window).on('resize', function() {
+        CartDisplay();
+    });
 
 
 })(jQuery);
