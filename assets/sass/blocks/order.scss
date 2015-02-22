@@ -1,0 +1,75 @@
+.order {
+    .small-area{
+        .strip{
+            width: 500px;
+            background-color: #00A2E2;
+            height: 4px;
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            .disk {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: #C8F0FF;
+                position: absolute;
+                border: 1px solid #00A2E2;
+                &:nth-child(1) {
+                    top: -13px;
+                }
+                &:nth-child(2) {
+                    top: -13px;
+                    right: 50%;
+                    margin-left: -15px;
+                }
+                &:nth-child(3) {
+                    top: -13px;
+                    right: 0;
+                }
+                .fa {
+                    display: none;
+                }
+                &.active {
+                    background-color: #00A2E2;
+                    color: white;
+                    .fa {
+                        display: block;
+                        padding-top: 7px;
+                        text-align: center;
+                        font-size: rem(15);
+                    }
+                }
+            }
+            .view-title {
+                position: absolute;
+                font-family: 'PT Sans Narrow';
+                font-size: rem(28);
+                color: #000000;
+                line-height: 1;
+                &:nth-child(1) {
+                    top: -65px;
+                    left: -30px;
+                }
+                &:nth-child(2) {
+                    top: -65px;
+                    left: 190px;
+                }
+                &:nth-child(3) {
+                    top: -65px;
+                    right: -18px;;
+                }
+            }
+        }
+    }
+    .big-area {
+        .order-form {
+            fieldset {
+                padding: 0;
+                margin: 0;
+                .normal-select {
+                    border-bottom: 1px solid gray;
+                } // normal-select
+            } // fieldset
+        } // order-form
+    }
+}
