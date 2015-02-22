@@ -24,8 +24,135 @@
 </head>
 <body>
 
+<!-- cart-display -->
+<div class="cart-display" data-role="cart-display">
+    <div class="cart-content">
+        <div data-role="cart-order">
+            <form action="" class="one-click-order">
+                <div class="fieldset">
+                    <label for="">
+                        <sup>*</sup>Телефон
+                    </label>
+                    <div class="inputs">
+                        <input type="text" data-role="phone-mask">
+                    </div>
+                </div>
+                <div class="fieldset">
+                    <label for="">
+                        <sup>*</sup>Имя
+                    </label>
+                    <div class="inputs">
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="fieldset">
+                    <label for="">
+                        Сообщение
+                    </label>
+                    <div class="inputs">
+                        <textarea name="" id=""></textarea>
+                    </div>
+                </div>
+                <div class="fieldset buttons">
+                    <button class="button button-transparent" data-role="trigger-one-click-hide">Отмена</button>
+                    <button class="button button-blue order">Купить</button>
+                </div>
+                <div class="fieldset required-expl">
+                    <sup>*</sup>обязательное поле
+                </div>
+            </form>
+        </div>
+        <div data-role="cart-items">
+            <!-- cart-items -->
+            <div class="cart-items">
+                <div class="cart-item">
+                    <div class="cart-item-cell image">
+                        <img src="/static/images/tmp/cart-item.png" alt="">
+                    </div>
+                    <div class="cart-item-cell name">
+                        <div class="item-name">Фильтр для питьевой воды XCore 11</div>
+                    </div>
+                    <div class="cart-item-cell price">
+                        <span class="price">340,00</span>
+                        <span class="currency">грн.</span>
+                    </div>
+                    <div class="cart-item-cell count-updater" data-role="cart-item">
+                        <span class="count-button" data-role="cart-item-count-plus">
+                            <i class="fa fa-plus-circle"></i>
+                        </span>
+                        <input type="text" class="count" value="1" data-role="cart-item-count">
+                        <span class="count-button" data-role="cart-item-count-minus">
+                            <i class="fa fa-minus-circle"></i>
+                        </span>
+                        <span class="count-button remove" data-role="cart-item-count-delete">
+                            <i class="fa fa-plus-circle"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <div class="cart-item-cell image">
+                        <img src="/static/images/tmp/cart-item.png" alt="">
+                    </div>
+                    <div class="cart-item-cell name">
+                        <div class="item-name">Фильтр для питьевой воды XCore 11</div>
+                    </div>
+                    <div class="cart-item-cell price">
+                        <span class="price">340,00</span>
+                        <span class="currency">грн.</span>
+                    </div>
+                    <div class="cart-item-cell count-updater" data-role="cart-item">
+                        <span class="count-button" data-role="cart-item-count-plus">
+                            <i class="fa fa-plus-circle"></i>
+                        </span>
+                        <input type="text" class="count" value="1" data-role="cart-item-count">
+                        <span class="count-button" data-role="cart-item-count-minus">
+                            <i class="fa fa-minus-circle"></i>
+                        </span>
+                        <span class="count-button remove" data-role="cart-item-count-delete">
+                            <i class="fa fa-plus-circle"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <div class="cart-item-cell image">
+                        <img src="/static/images/tmp/cart-item.png" alt="">
+                    </div>
+                    <div class="cart-item-cell name">
+                        <div class="item-name">Фильтр для питьевой воды XCore 11</div>
+                    </div>
+                    <div class="cart-item-cell price">
+                        <span class="price">340,00</span>
+                        <span class="currency">грн.</span>
+                    </div>
+                    <div class="cart-item-cell count-updater" data-role="cart-item">
+                        <span class="count-button" data-role="cart-item-count-plus">
+                            <i class="fa fa-plus-circle"></i>
+                        </span>
+                        <input type="text" class="count" value="1" data-role="cart-item-count">
+                        <span class="count-button" data-role="cart-item-count-minus">
+                            <i class="fa fa-minus-circle"></i>
+                        </span>
+                        <span class="count-button remove" data-role="cart-item-count-delete">
+                            <i class="fa fa-plus-circle"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- /cart-items -->
+            <div class="total-display">
+                3 товара на сумму <strong>1020</strong> грн.
+            </div>
+            <div class="cart-buttons">
+                <button class="button button-blue order">Купить</button>
+                <button class="button button-blue one-click" data-role="trigger-one-click">в один клик</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /cart-display -->
+
 <!-- main-header -->
-<nav class="main-header">
+<nav class="main-header" data-role="main-header">
     <div class="wrap">
 
         <!-- small-menu -->
@@ -38,31 +165,13 @@
         </ul>
         <!-- /small-menu -->
 
-        <!-- currency -->
-        <div class="currency-mobile">
-            <div class="custom-select currency-select-mobile">
-                <select name="" id="">
-                    <option value="">UAH</option>
-                    <option value="">€</option>
-                </select>
-            </div>
-        </div>
-        <!-- /currency -->
-
         <!-- cart-display-mobile -->
         <div class="cart-display-mobile">
-            <a href="#" class="cart-display-link">
+            <a href="#" class="cart-display-link" data-role="cart-display-trigger-mobile">
                 <div class="cart-count">2</div>
             </a>
         </div>
         <!-- /cart-display-mobile -->
-
-        <!-- currency -->
-        <ul class="currency">
-            <li class="currency-item active">UAH</li>
-            <li class="currency-item">€</li>
-        </ul>
-        <!-- /currency -->
 
     </div>
 </nav>
@@ -101,8 +210,8 @@
                 <!-- /email -->
                 <!-- cart -->
                 <div class="info-block cart">
-                    <a href="#" class="cart-display-link">
-                        <div class="cart-count">2</div>
+                    <a href="#" class="cart-display-link" data-role="cart-display-trigger">
+                        <div class="cart-count" data-role="cart-display-trigger-count">2</div>
                         <span class="cart-info">
                             <span class="text-cart">В корзине</span>
                             <span>товаров на сумму</span>
