@@ -36,6 +36,7 @@ img {
 a {
     color: $link-color;
     @include transition(all, 0.3s, ease);
+    cursor: pointer;
     &:hover {
         text-decoration: none;
     } // &:hover
