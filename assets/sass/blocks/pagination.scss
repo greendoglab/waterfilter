@@ -88,3 +88,13 @@
         display: none;
     } // lg
 } // pagination-mobile
+
+.link {
+    text-align: center;
+    margin: 10px 0;
+    a {
+        color: #5a5a5a;
+        font-size: rem(30);
+        font-family: Arial;
+    } // a
+} // link
