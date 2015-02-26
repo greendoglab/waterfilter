@@ -180,12 +180,14 @@
                 } // add-to-cart-box
                 .label {
                     font-family: Arial;
-                    font-size: rem(20);
+                    font-size: rem(16);
+                    line-height: 1;
+                    text-transform: lowercase;
                     position: absolute;
                     color: white;
-                    padding: 0 10px;
+                    padding: 4px 10px;
                     border-radius: 2px;
-                    top: -17px;
+                    top: -12px;
                     left: 10px;
                     &.new {
                         background-color: #7ED321;
