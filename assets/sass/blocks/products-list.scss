@@ -4,6 +4,7 @@
     } // wrap
     .view-title {
         @include inline-middle;
+        margin: 0;
     } // view-title
     .filter-line {
         float: right;
@@ -30,21 +31,23 @@
                     text-align: center;
                     &.freewidth {
                         width: auto;
-                        background-color: #EEE;
                         padding: 4px 10px;
                         position: relative;
-                        &:before {
-                            content: '';
-                            width: 0;
-                            height: 0;
-                            border-style: solid;
-                            border-width: 18px 16px 0 16px;
-                            border-color: #eeeeee transparent transparent transparent;
-                            position: absolute;
-                            bottom: -18px;
-                            left: 50%;
-                            margin-left: -15px;
-                        } // &:before
+                        &.active {
+                            background-color: #EEE;
+                            &:before {
+                                content: '';
+                                width: 0;
+                                height: 0;
+                                border-style: solid;
+                                border-width: 18px 16px 0 16px;
+                                border-color: #eeeeee transparent transparent transparent;
+                                position: absolute;
+                                bottom: -18px;
+                                left: 50%;
+                                margin-left: -15px;
+                            } // &:before
+                        } // &.active
                     } // &.freewidth
                     span.filter {
                         @include inline-middle;
