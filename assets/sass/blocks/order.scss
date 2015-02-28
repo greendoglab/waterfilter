@@ -79,7 +79,7 @@
                     display: block;
                 } // &.active
             } // [class^="step-"]
-            .step-1 {
+            .step-2 {
                 @include clearfix;
                 fieldset {
                     padding: 5px 0;
@@ -121,8 +121,8 @@
                         width: 350px;
                     } // input[type="text"]
                 } // fieldset
-            } // step-1
-            .step-2 {
+            } // step-2
+            .step-3 {
                 @include clearfix;
                 .column {
                     ul {
@@ -161,7 +161,7 @@
                         } // bold
                     } // &.second
                 } // column
-            } // step-2
+            } // step-3
         } // order-form
     } // big-area
     .buttons {
