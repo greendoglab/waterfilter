@@ -38,6 +38,7 @@ module.exports = function(grunt) {
             dist: {
                 src: [
                     'bower_components/jquery/dist/jquery.min.js',
+                    'bower_components/jQuery-Mask-Plugin/dist/jquery.mask.min.js',
                     'assets/js/scripts.js'
                 ],
                 dest: 'static/js/production.js',

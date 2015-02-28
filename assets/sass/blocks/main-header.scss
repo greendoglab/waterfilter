@@ -16,6 +16,11 @@
             text-decoration: none;
             display: block;
             padding-left: 30px;
+            &.active {
+                .cart-count {
+                    background-color: #00A2E2;
+                } // .cart-count
+            } // &.active
             .cart-count {
                 box-sizing: border-box;
                 border-radius: 100%;
