@@ -53,6 +53,9 @@
     outline: none;
     border-radius: 2px;
     border-bottom: 2px solid transparent;
+    &.button-transparent {
+        background: transparent;
+    } // &.button-transparent
     &.button-blue {
         background: #3498DB;
         color: white;
@@ -69,9 +72,7 @@
         &.add-to-cart {
             &:before {
                 content: '\f07a';
-                // transform: scale(0.5, 0.5);
                 font: normal normal normal 14px/1 FontAwesome;
-                font-size: inherit;
                 text-rendering: auto;
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
@@ -80,5 +81,38 @@
                 margin-right: 10px;
             } // &:before
         } // add-to-cart
+        &.order {
+            &:before {
+                content: '\f15c';
+                font: normal normal normal 14px/1 FontAwesome;
+                font-family: FontAwesome;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                color: #1F3D5B;
+                text-shadow: 1px 1px 2px rgba(164, 190, 207, .45);
+                margin-right: 10px;
+            } // &.before
+        } // &.order
+        &.one-click {
+            background: #1D73AC;
+            border-bottom: 2px solid #135B8A;
+        } // &.oneclick
     } // &.button-blue
 } // button
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    box-sizing: border-box;
+    border-color: transparent;
+    border-bottom: 1px solid #979797;
+}
+
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border-color: transparent;
+    border-bottom: 1px solid #979797;
+}
