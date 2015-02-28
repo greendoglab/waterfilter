@@ -144,14 +144,14 @@
     <div class="wrap">
         <!-- strip -->
         <div class="small-area">
-            <div class="strip">
-                <div class="disk active">
+            <div class="strip" data-role="decor-line">
+                <div class="disk active" data-role="decor-disk-1">
                     <i class="fa fa-check"></i>
                 </div>
-                <div class="disk">
+                <div class="disk" data-role="decor-disk-2">
                     <i class="fa fa-check"></i>
                 </div>
-                <div class="disk">
+                <div class="disk" data-role="decor-disk-3">
                     <i class="fa fa-check"></i>
                 </div>
                 <div>
@@ -164,12 +164,12 @@
         <!-- /strip -->
 
         <!-- form -->
-        <form action="">
+        <form action="" data-role="order-form">
             <div class="big-area">
                 <div class="order-form">
 
                     <!-- step-1 -->
-                    <div class="step-1">
+                    <div class="step-1 active" data-role="order-step-1">
                         <fieldset>
                             <label>Способ доставки:</label>
                             <div class="input">
@@ -218,9 +218,8 @@
                         </fieldset>
                     </div>
                     <!-- /step-1 -->
-
                     <!-- step-2 -->
-                    <div class="step-2">
+                    <div class="step-2" data-role="order-step-2">
 
                         <div class="column first">
                             <ul class="radio-list">
@@ -249,10 +248,14 @@
                         </div>
                     </div>
                     <!-- /step-2 -->
+                    <div class="step-3" data-role="order-step-3">
+                        Finita la comedia Nemtsov!
+                    </div>
                 </div>
             </div>
             <div class="buttons">
-                <button form="" type="submit" class="button button-blue">продолжить</button>
+                <button form="" type="submit" class="button" data-trigger="prev">Назад</button>
+                <button form="" type="submit" class="button button-blue" data-trigger="next">продолжить</button>
             </div>
         </form>
         <!-- /form -->
