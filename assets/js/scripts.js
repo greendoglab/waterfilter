@@ -20,9 +20,71 @@
         }).filter(':first').click();
     }
 
+    // Tempory Order Steps show/hide
+    function OrderSteps() {
+        var decrLine = $('[data-role="decor-line"]');
+        var decorDisk = decrLine.find('[data-role^="decor-disk-"]');
+        var orderForm = $('[data-role="order-form"]');
+        var formSteps = orderForm.find('[data-role^="order-step-"]');
+        var next = $('[data-trigger="next"]');
+        var prev = $('[data-trigger="prev"]');
+        var index = 0;
+
+        prev.hide();
+
+        function setCurrentItems(itemsArray, decorArray, action) {
+
+            for (i = 0; i < itemsArray.length; i++) {
+                var item = itemsArray.eq(i);
+                var decorItem = decorArray.eq(i)
+                if (item.hasClass('active')) {
+                    item.removeClass('active');
+                    decorItem.removeClass('active');
+                    item.hide();
+                    if (action == 'next') {
+                        index = itemsArray.index(item) + 1;
+                    } else if (action == 'prev') {
+                        index = itemsArray.index(item) - 1;
+                    }
+                }
+            }
+
+            // item active
+            newItem = itemsArray.eq(index);
+            newItem.fadeIn().addClass('active');
+
+            // decor item active
+            newDecorArray = decorArray.eq(index);
+            newDecorArray.addClass('active');
+
+            if (itemsArray.eq(0).hasClass('active')) {
+                prev.hide();
+            } else {
+                prev.show();
+            }
+            if (itemsArray.eq(itemsArray.length-1).hasClass('active')) {
+                next.hide();
+            } else {
+                next.show();
+            }
+        }
+
+        // next function
+        next.click(function() {
+            setCurrentItems(formSteps, decorDisk, 'next');
+        });
+
+        // prev function
+        prev.click(function() {
+            setCurrentItems(formSteps, decorDisk, 'prev');
+        });
+
+    }
+
     // document ready
     $(window).on('load', function() {
         ProductsViewType();
+        OrderSteps();
     });
 
     // all initial on window resize
