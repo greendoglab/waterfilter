@@ -9,6 +9,20 @@
         }
     }
 
+    // Tabs
+    function Tabs() {
+        var tabContainer = $('[data-role="tab"]');
+        tabContainer.hide().filter(':first').show();
+
+        $('[data-role="tab-trigger"]').click(function () {
+            tabContainer.hide();
+            tabContainer.filter(this.hash).show();
+            $('[data-role="tab-trigger"]').removeClass('active');
+            $(this).addClass('active');
+            return false;
+        }).filter(':first').click();
+    }
+
     // ProductsViewType
     function ProductsViewType() {
         var viewContainer = $('[data-role="products-view"]');
@@ -256,6 +270,7 @@
         oneClickOrder();
         phoneMask();
         CartDisplay();
+        Tabs();
     });
 
     // all initial on window resize
