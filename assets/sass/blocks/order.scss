@@ -79,7 +79,7 @@
                     display: block;
                 } // &.active
             } // [class^="step-"]
-            .step-2 {
+            .step-1, .step-2 {
                 @include clearfix;
                 fieldset {
                     padding: 5px 0;
@@ -94,10 +94,14 @@
                         text-align: right;
                     } // label
                     .input {
+                        width: calc(100% - 240px);
                         float: right;
+                        box-sizing: border-box;
+                        padding-left: 10px;
+                        padding-right: 20px;
                         .normal-select {
                             border-bottom: 1px solid gray;
-                            width: 355px;
+                            width: 100%;
                             &:after {
                                 color: #828282;
                                 content: '\f107';
@@ -115,13 +119,19 @@
                             } // select
                         } // normal-select
                     } // input
-                    input[type="text"] {
+                    input[type="text"],
+                    input[type="tel"],
+                    input[type="email"] {
                         border: none;
                         border-bottom: 1px solid gray;
-                        width: 350px;
+                        width: 100%;
+                        color: rgb(130, 130, 130);
+                        font-size: rem(16);
+                        line-height: 1.2;
+                        padding-bottom: 4px;
                     } // input[type="text"]
                 } // fieldset
-            } // step-2
+            } // step-1, step-2
             .step-3 {
                 @include clearfix;
                 .column {
@@ -168,7 +178,6 @@
         margin: 30px 0;
         text-align: center;
         button {
-            width: 180px;
             vertical-align: middle;
             position: relative;
         } // button

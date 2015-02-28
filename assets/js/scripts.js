@@ -28,8 +28,10 @@
         var formSteps = orderForm.find('[data-role^="order-step-"]');
         var next = $('[data-trigger="next"]');
         var prev = $('[data-trigger="prev"]');
+        var finish = $('[data-trigger="finish"]');
         var index = 0;
 
+        finish.hide();
         prev.hide();
 
         function setCurrentItems(itemsArray, decorArray, action) {
@@ -39,12 +41,12 @@
                 var decorItem = decorArray.eq(i)
                 if (item.hasClass('active')) {
                     item.removeClass('active');
-                    decorItem.removeClass('active');
                     item.hide();
                     if (action == 'next') {
                         index = itemsArray.index(item) + 1;
                     } else if (action == 'prev') {
                         index = itemsArray.index(item) - 1;
+                        decorItem.removeClass('active');
                     }
                 }
             }
@@ -64,8 +66,10 @@
             }
             if (itemsArray.eq(itemsArray.length-1).hasClass('active')) {
                 next.hide();
+                finish.show();
             } else {
                 next.show();
+                finish.hide();
             }
         }
 
