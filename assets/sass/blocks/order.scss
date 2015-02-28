@@ -73,8 +73,13 @@
         .order-form {
             margin: 15px;
             box-sizing: border-box;
-            .step-1 {
+            [class^="step-"] {
                 display: none;
+                &.active {
+                    display: block;
+                } // &.active
+            } // [class^="step-"]
+            .step-1 {
                 @include clearfix;
                 fieldset {
                     padding: 5px 0;
