@@ -154,6 +154,7 @@
                         display: block;
                     } // lg
                     .cart-display-link {
+                        @include no-select;
                         @include clearfix;
                         text-decoration: none;
                         display: block;
