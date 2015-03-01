@@ -9,6 +9,12 @@
         }
     }
 
+    function classCheckByTrigger(elem, trigger, classname) {
+        trigger.click(function() {
+            classCheck(elem, classname);
+        });
+    }
+
     // ProductsViewType
     function ProductsViewType() {
         var viewContainer = $('[data-role="products-view"]');
@@ -181,6 +187,32 @@
         phoneInput.mask("(000) 000-00-00", {placeholder: "(099) 999-99-99"});
     }
 
+    // popup menu
+    function popupSearch() {
+        var search = $('[data-role="popup-search"]');
+        var searchTrigger = $('[data-role="popup-search-trigger"]');
+        var productMenu = $('[data-role="product-menu"]');
+
+        productPosition = productMenu.position();
+        popupTop = productPosition.top + productMenu.outerHeight();
+
+        search.css('top', popupTop);
+        classCheckByTrigger(search, searchTrigger, 'active');
+    }
+
+    // popup menu
+    function popupMenu() {
+        var menu = $('[data-role="popup-menu"]');
+        var menuTrigger = $('[data-role="popup-menu-trigger"]');
+        var productMenu = $('[data-role="product-menu"]');
+
+        productPosition = productMenu.position();
+        popupTop = productPosition.top + productMenu.outerHeight();
+
+        menu.css('top', popupTop);
+        classCheckByTrigger(menu, menuTrigger, 'active');
+    }
+
     // document ready
     $(window).on('load', function() {
         ProductsViewType();
@@ -190,6 +222,8 @@
         oneClickOrder();
         phoneMask();
         CartDisplay();
+        popupSearch();
+        popupMenu();
     });
 
     // all initial on window resize
