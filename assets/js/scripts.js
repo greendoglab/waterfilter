@@ -308,6 +308,19 @@
         classCheckByTrigger(menu, menuTrigger, 'active');
     }
 
+    function popupMobileMenu() {
+        var menu = $('[data-role="popup-mobile-menu"]');
+        var menuTrigger = $('[data-role="popup-mobile-menu-trigger"]');
+        var header = $('[data-role="main-header"]');
+
+        headerPosition = header.position();
+        popupTop = headerPosition.top + header.outerHeight();
+
+        console.log('menu');
+        menu.css('top', popupTop);
+        classCheckByTrigger(menu, menuTrigger, 'active');
+    }
+
     function disabledElement() {
         var elem = $('[data-role="disabled"]');
         elem.off();
@@ -328,6 +341,7 @@
         Tabs();
         popupSearch();
         popupMenu();
+        popupMobileMenu();
         disabledElement()
     });
 
