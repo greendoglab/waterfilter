@@ -28,6 +28,7 @@
                     margin-right: 10px;
                 } // &:nth-child(1)
                 span.filter-button {
+                    @include no-select;
                     @include inline-middle;
                     font-size: rem(18);
                     color: #484848;
