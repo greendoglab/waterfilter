@@ -8,6 +8,7 @@
     } // view-title
     .filter-line {
         float: right;
+        @include no-select;
         @include bp(xs) {
             display: none;
         } // xs
@@ -43,6 +44,7 @@
                     &.price-tag {
                         &.active {
                             position: relative;
+                            color: #266AAC;
                             &:before {
                                 transform: scale(0.7, 0.7);
                                 content: "\f00c";
