@@ -96,7 +96,7 @@ module.exports = function(grunt) {
                 expand: true,
                 // Files to perform replacements and includes with
                 cwd: 'src/html/',
-                src: '*.html',
+                src: ['*/*.html', '*.html'],
                 // Destination directory to copy files to
                 dest: './production'
             }
