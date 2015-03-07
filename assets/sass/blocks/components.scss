@@ -15,11 +15,15 @@
 } // wrap
 
 .custom-select {
+    width: 100%;
+    box-sizing: border-box;
     background-color: transparent;
     position: relative;
     @include inline-middle;
     cursor: pointer;
     select {
+        width: 100%;
+        box-sizing: border-box;
         cursor: pointer;
         background: transparent;
         -webkit-appearance: none;
@@ -111,4 +115,9 @@ textarea {
     box-sizing: border-box;
     border-color: transparent;
     border-bottom: 1px solid #979797;
+}
+
+.disabled {
+    opacity: 0.5;
+    cursor: no-drop !important;
 }

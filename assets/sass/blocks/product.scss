@@ -77,13 +77,36 @@
             @include bp(xs) {
                 display: block;
             } // xs
-            .product-title {
-                font-family: 'PT Sans Narrow';
-                font-size: rem(34);
-                color: #2E2E2E;
-                line-height: 1;
-                margin: 0;
-            } // product-title
+            .title-line {
+                display: inline-block;
+                .product-title {
+                    @include inline-middle;
+                    font-family: 'PT Sans Narrow';
+                    font-size: rem(34);
+                    color: #2E2E2E;
+                    line-height: 1;
+                    margin: 0;
+                } // product-title
+                .label {
+                    @include inline-middle;
+                    font-family: Arial;
+                    font-size: rem(16);
+                    line-height: 1;
+                    text-transform: lowercase;
+                    color: white;
+                    padding: 4px 10px;
+                    border-radius: 2px;
+                    &.new {
+                        background-color: #7ED321;
+                    } // &.new
+                    &.action {
+                        background-color: #F1C40F;
+                    } // &.action
+                    &.discount {
+                        background-color: #D0021B;
+                    } // &.discount
+                } // label
+            } // title-line
             .price-line {
                 border-top: 1px solid #979797;
                 padding-top: 20px;
