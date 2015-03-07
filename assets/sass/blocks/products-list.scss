@@ -18,6 +18,37 @@
                 margin-left: 10px;
             } // li + li
             li {
+                &.price {
+                    color: #4a4a4a;
+                    font-size: rem(18);
+                    font-family: Arial;
+                    line-height: 21px;
+                } // &.price
+                span.cost {
+                    font-size: rem(18);
+                    color: #484848;
+                    line-height: 1;
+                    cursor: pointer;
+                    opacity: 0.5;
+                    text-align: center;
+                    padding: 0 10px;
+                    &.active {
+                        color: #266AAC;
+                        position: relative;
+                        padding-right: 3px;
+                        opacity: 1;
+                        &:before {
+                            content: "\f00c";
+                            font: normal normal normal 14px/1 FontAwesome;
+                            text-rendering: auto;
+                            -webkit-font-smoothing: antialiased;
+                            position: absolute;
+                            top: 0;
+                            left: -5px;
+                            color: #00a2e2;
+                        } // &:before
+                    } // active
+                } // span.cost
                 &:nth-child(1) {
                     margin-right: 10px;
                 } // &:nth-child(1)
