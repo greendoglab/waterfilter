@@ -9,9 +9,6 @@
     .filter-line {
         float: right;
         @include no-select;
-        @include bp(xs) {
-            display: none;
-        } // xs
         ul.filters {
             @include inline-middle;
             @include clear-list-inline;

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Water filters shop</title>
+
+<meta name="author" content="Михаил Якименко" />
+<link rel="shortcut icon" href="/static/images/64x64.png" type="image/x-icon" />
+<!-- Render -->
+<link rel="stylesheet" type="text/css" href="/static/css/normalize.css">
+<link rel="stylesheet" type="text/css" href="/static/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/static/css/style.css">
+<script src="/static/js/production.js"></script>
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+
+@@include('partials/mobile-menu.html')
+
+@@include('partials/menu.html')
+
+@@include('partials/search.html')
+
+@@include('partials/cart-display.html')
+
+@@include('partials/header.html')
+
+@@include('partials/welcome.html')
+
+@@include('partials/product-menu.html')
+
+<!-- large-baner -->
+<div class="large-baner">
+    <div class="wrap">
+        <div class="baner-back">
+            <span class="prev"></span>
+            <a href="#">
+                <img src="/static/images/tmp/waterfilter.png" alt="">
+            </a>
+            <span class="next"></span>
+        </div>
+    </div>
+</div>
+<!-- /large-baner -->
+
+<!-- catalogue-directories -->
+<div class="catalogue-directories">
+    <div class="wrap">
+        <ul class="directories-list">
+            @@include('items/index-category-item.html')
+            @@include('items/index-category-item.html')
+            @@include('items/index-category-item.html')
+            @@include('items/index-category-item.html')
+            @@include('items/index-category-item.html')
+            @@include('items/index-category-item.html')
+            @@include('items/index-category-item.html')
+            @@include('items/index-category-item.html')
+            @@include('items/index-category-item.html')
+            @@include('items/index-category-item.html')
+            @@include('items/index-category-item.html')
+            @@include('items/index-category-item.html')
+        </ul>
+    </div>
+</div>
+<!-- /catalogue-directories -->
+
+<!-- home-page-text -->
+<div class="home-page-text">
+    <div class="wrap">
+        <h2 class="text-title">Фильтры для воды, для дома и для офиса</h2>
+        <article class="text-text">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non mollis lectus. Praesent venenatis urna in odio venenatis blandit. Aenean pretium neque sit amet ante luctus, in egestas mi ornare. Maecenas convallis, ex sed placerat condimentum, magna nunc eleifend lorem, quis commodo nisl sem non erat. Ut quis ligula aliquet, posuere ligula a, dictum urna. Curabitur quam sem, tristique vitae cursus eget, pretium condimentum nulla. Aenean sit amet orci suscipit, vestibulum leo non, ultricies ex.
+            </p>
+            <p>
+                Quisque porta risus leo, ut condimentum arcu vehicula eget. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In vitae convallis ligula. Morbi vestibulum lectus malesuada felis tempus, a lacinia sapien laoreet. Nam ut cursus nisi. Suspendisse tincidunt mauris sed porttitor maximus. Nunc lobortis tellus eget massa molestie euismod. Integer dictum consequat placerat. Praesent placerat in ex eu tristique. Nunc eleifend dignissim nibh, non gravida odio imperdiet et.
+            </p>
+            <p>
+                Fusce accumsan ipsum auctor, gravida nunc sollicitudin, rhoncus risus. Etiam porta orci metus, at ultricies lectus cursus sit amet. Sed sagittis orci sit amet dui elementum, ac ultrices magna varius. Praesent eros purus, pharetra eu vehicula a, eleifend at quam. Duis at felis mattis urna pellentesque fermentum vel ac ex. Donec placerat vitae tortor ut dapibus. Aliquam risus elit, elementum vel tortor non, cursus rhoncus lacus.
+            </p>
+        </article>
+    </div>
+</div>
+<!-- /home-page-text -->
+
+@@include('partials/footer.html')
+
+</body>
+</html>
