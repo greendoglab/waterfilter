@@ -24,31 +24,6 @@
                     font-family: Arial;
                     line-height: 21px;
                 } // &.price
-                span.cost {
-                    font-size: rem(18);
-                    color: #484848;
-                    line-height: 1;
-                    cursor: pointer;
-                    opacity: 0.5;
-                    text-align: center;
-                    padding: 0 10px;
-                    &.active {
-                        color: #266AAC;
-                        position: relative;
-                        padding-right: 3px;
-                        opacity: 1;
-                        &:before {
-                            content: "\f00c";
-                            font: normal normal normal 14px/1 FontAwesome;
-                            text-rendering: auto;
-                            -webkit-font-smoothing: antialiased;
-                            position: absolute;
-                            top: 0;
-                            left: -5px;
-                            color: #00a2e2;
-                        } // &:before
-                    } // active
-                } // span.cost
                 &:nth-child(1) {
                     margin-right: 10px;
                 } // &:nth-child(1)
@@ -60,25 +35,46 @@
                     cursor: pointer;
                     width: 25px;
                     text-align: center;
+                    &.gray {
+                        color: #9D9D9D;
+                        cursor: pointer;
+                        &.active {
+                            position: relative;
+                            &:before {
+                                transform: scale(0.7, 0.7);
+                                content: "\f00c";
+                                font: normal normal normal 14px/1 FontAwesome;
+                                text-rendering: auto;
+                                -webkit-font-smoothing: antialiased;
+                                position: absolute;
+                                top: 4px;
+                                left: -10px;
+                                color: #00a2e2;
+                            } // &:before
+                        } // active
+                    } // gray
                     &.freewidth {
                         width: auto;
-                        padding: 4px 10px;
+                        padding: 4px;
                         position: relative;
-                        &.active {
-                            background-color: #EEE;
-                            &:before {
-                                content: '';
-                                width: 0;
-                                height: 0;
-                                border-style: solid;
-                                border-width: 18px 16px 0 16px;
-                                border-color: #eeeeee transparent transparent transparent;
-                                position: absolute;
-                                bottom: -18px;
-                                left: 50%;
-                                margin-left: -15px;
-                            } // &:before
-                        } // &.active
+                        &.filters-trigger {
+                            color: #4a4a4a;
+                            &.active {
+                                background-color: #EEE;
+                                &:before {
+                                    content: '';
+                                    width: 0;
+                                    height: 0;
+                                    border-style: solid;
+                                    border-width: 18px 16px 0 16px;
+                                    border-color: #eeeeee transparent transparent transparent;
+                                    position: absolute;
+                                    bottom: -18px;
+                                    left: 50%;
+                                    margin-left: -15px;
+                                } // &:before
+                            } // &.active
+                        } // filters-trigger
                     } // &.freewidth
                     span.filter {
                         @include inline-middle;
