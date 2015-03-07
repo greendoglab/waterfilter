@@ -19,7 +19,7 @@
                 margin: 0;
             } // filter-title
             .first-container {
-                width: 30%;
+                width: 40%;
                 float: left;
                 .main-filters {
                     @include clear-list-inline;
@@ -27,31 +27,35 @@
                     color: #B1B1B1;
                     font-size: rem(18);
                     font-family: Arial;
-                    li {
-                        &.active {
-                            color: #266AAC;
-                            position: relative;
-                            padding-right: 3px;
-                            &:before {
-                                content: "\f00c";
-                                font: normal normal normal 14px/1 FontAwesome;
-                                text-rendering: auto;
-                                -webkit-font-smoothing: antialiased;
-                                position: absolute;
-                                top: 9px;
-                                left: 7px;
-                                color: #00a2e2;
-                            } // &:before
-                        } // &.active
-                    } // li
                     li + li {
-                        padding: 0 25px;
+                        margin-left: 15px;
                     } // li + li
+                    li {
+                        .item {
+                            cursor: pointer;
+                            &.active {
+                                color: #266AAC;
+                                position: relative;
+                                padding-right: 3px;
+                                &:before {
+                                    transform: scale(0.7, 0.7);
+                                    content: "\f00c";
+                                    font: normal normal normal 14px/1 FontAwesome;
+                                    text-rendering: auto;
+                                    -webkit-font-smoothing: antialiased;
+                                    position: absolute;
+                                    top: 4px;
+                                    left: -15px;
+                                    color: #00a2e2;
+                                } // &:before
+                            } // &.active
+                        } // item
+                    } // li
                 } // main-filters
             } // first-container
             .second-container {
                 float: right;
-                width: 70%;
+                width: 60%;
                 box-sizing: border-box;
                 padding-left: 50px;
                 position: relative;
@@ -133,26 +137,32 @@
                 color: #B1B1B1;
                 font-size: rem(18);
                 font-family: Arial;
-                li {
-                    &.active {
-                        color: #266AAC;
-                        position: relative;
-                        padding-right: 3px;
-                        &:before {
-                            content: "\f00c";
-                            font: normal normal normal 14px/1 FontAwesome;
-                            text-rendering: auto;
-                            -webkit-font-smoothing: antialiased;
-                            position: absolute;
-                            top: 9px;
-                            left: 7px;
-                            color: #00a2e2;
-                        } // &:before
-                    } // &. active
-                } // li
                 li + li {
-                    padding: 0 25px;
+                    margin-left: 15px;
                 } // li + li
+                li {
+                    &:first-child {
+                        padding-right: 15px;
+                    } // &:first-child
+                    .item {
+                        &.active {
+                            color: #266AAC;
+                            position: relative;
+                            padding-right: 3px;
+                            &:before {
+                                transform: scale(0.7, 0.7);
+                                content: "\f00c";
+                                font: normal normal normal 14px/1 FontAwesome;
+                                text-rendering: auto;
+                                -webkit-font-smoothing: antialiased;
+                                position: absolute;
+                                top: 4px;
+                                left: -18px;
+                                color: #00a2e2;
+                            } // &:before
+                        } // &.active
+                    } // .item
+                } // li
             } // main-filters
         } // producer
     } // filters
