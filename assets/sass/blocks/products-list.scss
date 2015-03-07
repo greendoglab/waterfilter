@@ -63,7 +63,7 @@
                             color: #4a4a4a;
                             &.active {
                                 background-color: #EEE;
-
+                                border-radius: 3px;
                                 &:before {
                                     content: '';
                                     width: 0;
