@@ -8,9 +8,6 @@
     } // view-title
     .filter-line {
         float: right;
-        @include bp(xs) {
-            display: none;
-        } // xs
         ul.filters {
             @include inline-middle;
             @include clear-list-inline;
@@ -27,6 +24,11 @@
                 &:nth-child(1) {
                     margin-right: 10px;
                 } // &:nth-child(1)
+                &:not(.show-filters) {
+                    @include bp(xs) {
+                        display: none;
+                    } // xs
+                } // &:not(.show-filters)
                 span.filter-button {
                     @include inline-middle;
                     font-size: rem(18);
@@ -63,7 +65,6 @@
                             color: #4a4a4a;
                             &.active {
                                 background-color: #EEE;
-
                                 &:before {
                                     content: '';
                                     width: 0;
@@ -125,7 +126,7 @@
         margin: 0 -10px;
         .product-box.list + .product-box.list {
             border-top: 1px solid #E2E2E2;
-        }
+        } // .product-box.list + .product-box.list
         .product-box {
             float: left;
             width: 25%;
