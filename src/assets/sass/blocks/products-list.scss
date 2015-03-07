@@ -9,9 +9,6 @@
     .filter-line {
         float: right;
         @include no-select;
-        @include bp(xs) {
-            display: none;
-        } // xs
         ul.filters {
             @include inline-middle;
             @include clear-list-inline;
@@ -28,6 +25,11 @@
                 &:nth-child(1) {
                     margin-right: 10px;
                 } // &:nth-child(1)
+                &:not(.show-filters) {
+                    @include bp(xs) {
+                        display: none;
+                    } // xs
+                } // &:not(.show-filters)
                 span.filter-button {
                     @include no-select;
                     @include inline-middle;
