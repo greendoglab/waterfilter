@@ -49,6 +49,23 @@
         }).filter(':first').click();
     }
 
+    function productFiltersShow() {
+        var viewContainer = $('[data-role="filters-block"]');
+        var viewTrigger = $('[data-role="filters-trigger"]');
+
+        viewTrigger.click(function() {
+            classCheck($(this) ,'active')
+            classCheck(viewContainer, 'state');
+        });
+    }
+
+    function filtersItems() {
+        var filterItem = $('[data-role="filter-item"]');
+        filterItem.click(function() {
+            $(this).toggleClass('active');
+        });
+    }
+
     // Tempory Order Steps show/hide
     function OrderSteps() {
         var decrLine = $('[data-role="decor-line"]');
@@ -111,7 +128,6 @@
         prev.click(function() {
             setCurrentItems(formSteps, decorDisk, 'prev');
         });
-
     }
 
     // ProductChars
@@ -292,6 +308,11 @@
         classCheckByTrigger(menu, menuTrigger, 'active');
     }
 
+    function disabledElement() {
+        var elem = $('[data-role="disabled"]');
+        elem.off();
+    }
+
     // document ready
     $(window).on('load', function() {
         ProductsViewType();
@@ -302,9 +323,12 @@
         oneClickOrder();
         phoneMask();
         CartDisplay();
+        productFiltersShow();
+        filtersItems()
         Tabs();
         popupSearch();
         popupMenu();
+        disabledElement()
     });
 
     // all initial on window resize

@@ -4,9 +4,11 @@
     } // wrap
     .view-title {
         @include inline-middle;
+        margin: 0;
     } // view-title
     .filter-line {
         float: right;
+        @include no-select;
         @include bp(xs) {
             display: none;
         } // xs
@@ -17,20 +19,68 @@
                 margin-left: 10px;
             } // li + li
             li {
+                &.price {
+                    color: #4a4a4a;
+                    font-size: rem(18);
+                    font-family: Arial;
+                    line-height: 21px;
+                } // &.price
                 &:nth-child(1) {
                     margin-right: 10px;
                 } // &:nth-child(1)
                 span.filter-button {
+                    @include no-select;
                     @include inline-middle;
                     font-size: rem(18);
-                    color: #979797;
+                    color: #484848;
                     line-height: 1;
                     cursor: pointer;
                     width: 25px;
-                    padding: 3px;
                     text-align: center;
+                    &.gray {
+                        color: #9D9D9D;
+                        cursor: pointer;
+                    } // gray
+                    &.price-tag {
+                        &.active {
+                            position: relative;
+                            color: #266AAC;
+                            &:before {
+                                transform: scale(0.7, 0.7);
+                                content: "\f00c";
+                                font: normal normal normal 14px/1 FontAwesome;
+                                text-rendering: auto;
+                                -webkit-font-smoothing: antialiased;
+                                position: absolute;
+                                top: 4px;
+                                left: -10px;
+                                color: #00a2e2;
+                            } // &:before
+                        } // active
+                    } // price-tag
                     &.freewidth {
                         width: auto;
+                        padding: 4px;
+                        position: relative;
+                        &.filters-trigger {
+                            color: #4a4a4a;
+                            &.active {
+                                background-color: #EEE;
+                                border-radius: 3px;
+                                &:before {
+                                    content: '';
+                                    width: 0;
+                                    height: 0;
+                                    border-style: solid;
+                                    border-width: 14px 12px 0 12px;
+                                    border-color: #eeeeee transparent transparent transparent;
+                                    position: absolute;
+                                    bottom: -14px;
+                                    left: 50%;
+                                    margin-left: -15px;
+                                } // &:before
+                            } // &.active
+                        } // filters-trigger
                     } // &.freewidth
                     span.filter {
                         @include inline-middle;
