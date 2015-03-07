@@ -38,6 +38,8 @@
                     &.gray {
                         color: #9D9D9D;
                         cursor: pointer;
+                    } // gray
+                    &.price-tag {
                         &.active {
                             position: relative;
                             &:before {
@@ -52,7 +54,7 @@
                                 color: #00a2e2;
                             } // &:before
                         } // active
-                    } // gray
+                    } // price-tag
                     &.freewidth {
                         width: auto;
                         padding: 4px;
@@ -61,15 +63,16 @@
                             color: #4a4a4a;
                             &.active {
                                 background-color: #EEE;
+
                                 &:before {
                                     content: '';
                                     width: 0;
                                     height: 0;
                                     border-style: solid;
-                                    border-width: 18px 16px 0 16px;
+                                    border-width: 14px 12px 0 12px;
                                     border-color: #eeeeee transparent transparent transparent;
                                     position: absolute;
-                                    bottom: -18px;
+                                    bottom: -14px;
                                     left: 50%;
                                     margin-left: -15px;
                                 } // &:before

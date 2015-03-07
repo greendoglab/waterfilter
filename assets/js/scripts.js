@@ -29,6 +29,16 @@
         }).filter(':first').click();
     }
 
+    function productFiltersShow() {
+        var viewContainer = $('[data-role="filters-block"]');
+        var viewTrigger = $('[data-role="filters-trigger"]');
+
+        viewTrigger.click(function() {
+            classCheck($(this) ,'active')
+            classCheck(viewContainer, 'state');
+        });
+    }
+
     // ProductChars
     function ProductChars() {
         var viewContainer = $('[data-role="products-chars"]');
@@ -190,6 +200,7 @@
         oneClickOrder();
         phoneMask();
         CartDisplay();
+        productFiltersShow();
     });
 
     // all initial on window resize

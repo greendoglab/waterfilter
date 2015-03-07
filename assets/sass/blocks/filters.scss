@@ -1,6 +1,9 @@
 .filter-block {
     margin-bottom: 40px;
     display: none;
+    &.state {
+        display: block;
+    } // &.state
     .filters {
         padding: 10px;
         background-color: #eee;
