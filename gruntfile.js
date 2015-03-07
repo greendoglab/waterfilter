@@ -130,7 +130,7 @@ module.exports = function(grunt) {
                 tasks: ['imagemin'],
             },
             includereplace: {
-                files: ['src/html/*.html', 'src/html/partials/*.html'],
+                files: ['src/html/*.html', 'src/html/*/*.html'],
                 tasks: ['includereplace']
             }
         },
