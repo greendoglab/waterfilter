@@ -128,6 +128,38 @@
                     } // list-image
                     .list-content {
                         @include table-cell;
+                        .title-line {
+                            display: inline-block;
+                            .title {
+                                font-family: 'PT Sans Narrow';
+                                font-size: rem(20);
+                                color: #000000;
+                                line-height: 1;
+                                margin: 0;
+                                margin-bottom: 20px;
+                            } // title
+                            .label {
+                                font-family: Arial;
+                                font-size: rem(16);
+                                line-height: 1;
+                                text-transform: lowercase;
+                                position: absolute;
+                                color: white;
+                                padding: 4px 10px;
+                                border-radius: 2px;
+                                top: 2px;
+                                left: 510px;
+                                &.new {
+                                    background-color: #7ED321;
+                                } // &.new
+                                &.action {
+                                    background-color: #F1C40F;
+                                } // &.action
+                                &.discount {
+                                    background-color: #D0021B;
+                                } // &.discount
+                            } // label
+                        } // title-line
                         .price-tag {
                             text-align: right;
                         } // price-tag
@@ -136,14 +168,6 @@
                         } // add-to-cart
                     } // list-content
                 } // product-list
-                .title {
-                    font-family: 'PT Sans Narrow';
-                    font-size: rem(20);
-                    color: #000000;
-                    line-height: 1;
-                    margin: 0;
-                    margin-bottom: 20px;
-                } // title
                 .description {
                     color: #5C5C5C;
                     font-size: rem(16);
