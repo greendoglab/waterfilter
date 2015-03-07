@@ -164,6 +164,14 @@
                     &:hover {
                         border: 1px solid #63B9E5;
                     } // &:hover
+                    .title {
+                        font-family: 'PT Sans Narrow';
+                        font-size: rem(20);
+                        color: #000000;
+                        line-height: 1;
+                        margin: 0;
+                        margin-bottom: 20px;
+                    } // title
                 } // product-grid
                 &.product-list {
                     @include table;
@@ -179,26 +187,25 @@
                     .list-content {
                         @include table-cell;
                         .title-line {
-                            display: inline-block;
+                            @include inline-middle;
+                            margin-bottom: 20px;
                             .title {
+                                @include inline-middle;
                                 font-family: 'PT Sans Narrow';
                                 font-size: rem(20);
                                 color: #000000;
                                 line-height: 1;
                                 margin: 0;
-                                margin-bottom: 20px;
                             } // title
                             .label {
+                                @include inline-middle;
                                 font-family: Arial;
                                 font-size: rem(16);
                                 line-height: 1;
                                 text-transform: lowercase;
-                                position: absolute;
                                 color: white;
                                 padding: 4px 10px;
                                 border-radius: 2px;
-                                top: 2px;
-                                left: 510px;
                                 &.new {
                                     background-color: #7ED321;
                                 } // &.new
@@ -257,12 +264,14 @@
                     font-size: rem(16);
                     line-height: 1;
                     text-transform: lowercase;
-                    position: absolute;
                     color: white;
                     padding: 4px 10px;
                     border-radius: 2px;
-                    top: -12px;
-                    left: 10px;
+                    &.in-grid {
+                        position: absolute;
+                        top: -12px;
+                        left: 10px;
+                    }
                     &.new {
                         background-color: #7ED321;
                     } // &.new
