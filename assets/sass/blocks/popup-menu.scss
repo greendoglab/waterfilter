@@ -1,3 +1,17 @@
+[data-role="popup-menu"] {
+    @include bp(xs) {
+        display: none !important;
+    }
+    @include bp(lg) {
+        display: none !important;
+    }
+}
+[data-role="popup-search"] {
+    @include bp(xs) {
+        display: none !important;
+    }
+}
+
 .popup-menu {
     display: none;
     position: absolute;
@@ -8,12 +22,6 @@
     z-index: 9;
     vertical-align: middle;
     padding: 30px 0;
-    @include bp(xs) {
-        display: none !important;
-    }
-    @include bp(lg) {
-        display: none !important;
-    }
     &.active {
         display: block;
     } // &.active
