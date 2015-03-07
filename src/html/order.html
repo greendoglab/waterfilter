@@ -24,227 +24,23 @@
 </head>
 <body>
 
-<!-- cart-display -->
-<div class="cart-display" data-role="cart-display">
-    <div class="cart-content">
-        <div data-role="cart-order">
-            <form action="" class="one-click-order">
-                <div class="fieldset">
-                    <label for="">
-                        <sup>*</sup>Телефон
-                    </label>
-                    <div class="inputs">
-                        <input type="text" data-role="phone-mask">
-                    </div>
-                </div>
-                <div class="fieldset">
-                    <label for="">
-                        <sup>*</sup>Имя
-                    </label>
-                    <div class="inputs">
-                        <input type="text">
-                    </div>
-                </div>
-                <div class="fieldset">
-                    <label for="">
-                        Сообщение
-                    </label>
-                    <div class="inputs">
-                        <textarea name="" id=""></textarea>
-                    </div>
-                </div>
-                <div class="fieldset buttons">
-                    <button class="button button-transparent" data-role="trigger-one-click-hide">Отмена</button>
-                    <button class="button button-blue order">Купить</button>
-                </div>
-                <div class="fieldset required-expl">
-                    <sup>*</sup>обязательное поле
-                </div>
-            </form>
-        </div>
-        <div data-role="cart-items">
-            <!-- cart-items -->
-            <div class="cart-items">
-                <div class="cart-item">
-                    <div class="cart-item-cell image">
-                        <img src="/static/images/tmp/cart-item.png" alt="">
-                    </div>
-                    <div class="cart-item-cell name">
-                        <div class="item-name">Фильтр для питьевой воды XCore 11</div>
-                    </div>
-                    <div class="cart-item-cell price">
-                        <span class="price">340,00</span>
-                        <span class="currency">грн.</span>
-                    </div>
-                    <div class="cart-item-cell count-updater" data-role="cart-item">
-                        <span class="count-button" data-role="cart-item-count-plus">
-                            <i class="fa fa-plus-circle"></i>
-                        </span>
-                        <input type="text" class="count" value="1" data-role="cart-item-count">
-                        <span class="count-button" data-role="cart-item-count-minus">
-                            <i class="fa fa-minus-circle"></i>
-                        </span>
-                        <span class="count-button remove" data-role="cart-item-count-delete">
-                            <i class="fa fa-plus-circle"></i>
-                        </span>
-                    </div>
-                </div>
-                <div class="cart-item">
-                    <div class="cart-item-cell image">
-                        <img src="/static/images/tmp/cart-item.png" alt="">
-                    </div>
-                    <div class="cart-item-cell name">
-                        <div class="item-name">Фильтр для питьевой воды XCore 11</div>
-                    </div>
-                    <div class="cart-item-cell price">
-                        <span class="price">340,00</span>
-                        <span class="currency">грн.</span>
-                    </div>
-                    <div class="cart-item-cell count-updater" data-role="cart-item">
-                        <span class="count-button" data-role="cart-item-count-plus">
-                            <i class="fa fa-plus-circle"></i>
-                        </span>
-                        <input type="text" class="count" value="1" data-role="cart-item-count">
-                        <span class="count-button" data-role="cart-item-count-minus">
-                            <i class="fa fa-minus-circle"></i>
-                        </span>
-                        <span class="count-button remove" data-role="cart-item-count-delete">
-                            <i class="fa fa-plus-circle"></i>
-                        </span>
-                    </div>
-                </div>
-                <div class="cart-item">
-                    <div class="cart-item-cell image">
-                        <img src="/static/images/tmp/cart-item.png" alt="">
-                    </div>
-                    <div class="cart-item-cell name">
-                        <div class="item-name">Фильтр для питьевой воды XCore 11</div>
-                    </div>
-                    <div class="cart-item-cell price">
-                        <span class="price">340,00</span>
-                        <span class="currency">грн.</span>
-                    </div>
-                    <div class="cart-item-cell count-updater" data-role="cart-item">
-                        <span class="count-button" data-role="cart-item-count-plus">
-                            <i class="fa fa-plus-circle"></i>
-                        </span>
-                        <input type="text" class="count" value="1" data-role="cart-item-count">
-                        <span class="count-button" data-role="cart-item-count-minus">
-                            <i class="fa fa-minus-circle"></i>
-                        </span>
-                        <span class="count-button remove" data-role="cart-item-count-delete">
-                            <i class="fa fa-plus-circle"></i>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <!-- /cart-items -->
-            <div class="total-display">
-                3 товара на сумму <strong>1020</strong> грн.
-            </div>
-            <div class="cart-buttons">
-                <button class="button button-blue order">Купить</button>
-                <button class="button button-blue one-click" data-role="trigger-one-click">в один клик</button>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- /cart-display -->
+@@include('partials/mobile-menu.html')
 
-<!-- main-header -->
-<nav class="main-header" data-role="main-header">
-    <div class="wrap">
+@@include('partials/menu.html')
 
-        <!-- small-menu -->
-        <ul class="small-menu">
-            <li class="small-menu-item bar-icon"><a href="#" class="fa fa-bars"></a></li>
-            <li class="small-menu-item"><a href="#">Галерея</a></li>
-            <li class="small-menu-item"><a href="#">Оплата и Доставка</a></li>
-            <li class="small-menu-item"><a href="#">О нас</a></li>
-            <li class="small-menu-item"><a href="#">Контакты</a></li>
-        </ul>
-        <!-- /small-menu -->
+@@include('partials/search.html')
 
-        <!-- cart-display-mobile -->
-        <div class="cart-display-mobile">
-            <a class="cart-display-link" data-role="cart-display-trigger-mobile">
-                <div class="cart-count">2</div>
-            </a>
-        </div>
-        <!-- /cart-display-mobile -->
+@@include('partials/cart-display.html')
 
-    </div>
-</nav>
-<!-- /main-header -->
+@@include('partials/header.html')
 
-<!-- welcome -->
-<div class="welcome">
+@@include('partials/welcome.html')
 
-    <div class="welcome-wrap">
-
-        <div class="welcome-block logo-box">
-            <div class="logo"></div>
-        </div>
-
-        <div class="welcome-block baner-box">
-            <div class="baner"></div>
-        </div>
-
-        <div class="welcome-block info-box">
-            <div class="info">
-                <!-- phones -->
-                <div class="info-block phones">
-                    <ul>
-                        <li>(044) 510-91-03</li>
-                        <li>(067) 417-00-21</li>
-                        <li>(050) 520-00-21</li>
-                    </ul>
-                </div>
-                <!-- /phones -->
-                <!-- email -->
-                <div class="info-block email">
-                    <ul>
-                        <li>info@waterproff.ua</li>
-                    </ul>
-                </div>
-                <!-- /email -->
-                <!-- cart -->
-                <div class="info-block cart">
-                    <a class="cart-display-link" data-role="cart-display-trigger">
-                        <div class="cart-count" data-role="cart-display-trigger-count">2</div>
-                        <span class="cart-info">
-                            <span class="text-cart">В корзине</span>
-                            <span>товаров на сумму</span>
-                            <span class="sum">3000 грн.</span>
-                        </span>
-                    </a>
-                </div>
-                <!-- /cart -->
-            </div>
-        </div>
-    </div>
-</div>
-<!--/welcome -->
-
-<!-- product-menu -->
-<nav class="product-menu">
-    <div class="wrap">
-        <ul class="menu">
-            <li class="bar-icon"><a href="#">Категории</a></li>
-            <li><a href="#">Питьевая вода</a></li>
-            <li><a href="#">Бытовая вода</a></li>
-            <li><a href="#">Для дома</a></li>
-            <li><a href="#">Для предприятий</a></li>
-            <li><a href="#">Картриджи</a></li>
-            <li class="lens"><a href="#"></a></li>
-        </ul>
-    </div>
-</nav>
-<!-- product-menu -->
+@@include('partials/product-menu.html')
 
 <div class="view-title-box">
     <div class="wrap">
-        <h1 class="view-title"></h1>
+        <h1 class="view-title">Оформление заказа</h1>
     </div>
 </div>
 
@@ -405,77 +201,7 @@
 </div>
 <!-- /order-container -->
 
-<!-- footer -->
-<div class="footer">
-    <!-- services -->
-    <div class="service">
-        <div class="wrap">
-            <div class="block-service car">
-                <h4>Доставка</h4>
-                <span>Бесплатно при</span>
-                <span>заказе свыше 2000 грн.</span>
-            </div>
-            <div class="block-service warranty">
-                <h4>Гарантия</h4>
-                <span>Гарантия 2 года</span>
-                <span>на все фильтры</span>
-            </div>
-            <div class="block-service discount">
-                <h4>Скидка</h4>
-                <span>При заказе</span>
-                <span>свыше 2000 грн.</span>
-            </div>
-            <div class="block-service key">
-                <h4>Обслуживание</h4>
-                <span>Установка и ремонт</span>
-                <span>фильтров для воды</span>
-            </div>
-        </div>
-    </div>
-    <!-- /services -->
-    <!-- footer-info -->
-    <div class="footer-info">
-        <div class="wrap">
-            <div class="column">
-                <h2>Наши адреса</h2>
-                <ul>
-                    <li class="city">Киев</li>
-                    <li>ул. Героев Сталинграда 52/2</li>
-                    <li>ул. Артема 13/2</li>
-                    <li class="city">Днепропетровск</li>
-                    <li>ул. Карла Маркса 11б</li>
-                </ul>
-            </div>
-            <div class="column">
-                <h2>Наши телефоны</h2>
-                <ul>
-                    <li>(044) 510-91-03</li>
-                    <li>(067) 417-00-21</li>
-                    <li>(050) 520-00-21</li>
-                </ul>
-            </div>
-            <div class="column">
-                <h2>Мы в интернете</h2>
-                <ul>
-                    <li class="social twitter"><a href="#">Twitter</a></li>
-                    <li class="social facebook"><a href="#">Facebook</a></li>
-                    <li class="social instagram"><a href="#">Instagram</a></li>
-                </ul>
-            </div>
-            <div class="column">
-                <h2>Информация</h2>
-                <ul>
-                    <li><a href="#">О нас</a></li>
-                    <li><a href="#">Галерея</a></li>
-                    <li><a href="#">Оплата и доставка</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- /footer-info -->
-</div>
-<!-- /footer -->
+@@include('partials/footer.html')
 
 </body>
 </html>
