@@ -1,3 +1,15 @@
+[data-role="popup-mobile-menu"] {
+    @include bp(sm) {
+        display: none !important;
+    } // sm
+    @include bp(md) {
+        display: none !important;
+    } // md
+    @include bp(lg) {
+        display: none !important;
+    } // lg
+}
+
 [data-role="popup-menu"] {
     @include bp(xs) {
         display: none !important;
