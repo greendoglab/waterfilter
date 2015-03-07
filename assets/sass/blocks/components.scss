@@ -15,11 +15,15 @@
 } // wrap
 
 .custom-select {
+    width: 100%;
+    box-sizing: border-box;
     background-color: transparent;
     position: relative;
     @include inline-middle;
     cursor: pointer;
     select {
+        width: 100%;
+        box-sizing: border-box;
         cursor: pointer;
         background: transparent;
         -webkit-appearance: none;
