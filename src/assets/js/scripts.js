@@ -236,7 +236,6 @@
                 function update() {
                     inputValueUpdated = parseInt((inputValue + 1))
                     if (inputValueUpdated > 1) {
-                        console.log('aaaaa');
                         minus.show();
                         itemDelete.hide();
                     }
@@ -249,7 +248,6 @@
                 function update() {
                     inputValueUpdated = parseInt((inputValue - 1))
                     if (inputValueUpdated === 1) {
-                        console.log('minus');
                         minus.hide();
                         itemDelete.show();
                     }
@@ -316,7 +314,6 @@
         headerPosition = header.position();
         popupTop = headerPosition.top + header.outerHeight();
 
-        console.log('menu');
         menu.css('top', popupTop);
         classCheckByTrigger(menu, menuTrigger, 'active');
     }
@@ -342,7 +339,7 @@
         popupSearch();
         popupMenu();
         popupMobileMenu();
-        disabledElement()
+        disabledElement();
     });
 
     // all initial on window resize
