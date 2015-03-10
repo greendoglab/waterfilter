@@ -15,19 +15,26 @@
         height: 15px;
         box-shadow: 0 0 1px #979797;
         cursor: pointer;
+        z-index: 2;
     } // ui-slider-handle
+    .ui-slider-range {
+        position: absolute;
+        z-index: 1;
+        height: 6px;
+        background-color: #4A90E2;
+    } //  ui-slider-range
     .value {
         position: absolute;
-        top: 30px;
+        top: 10px;
         left: 50%;
-        margin: 0 0 0 -20px;
+        margin: 0 0 0 -50px;
         width: 100px;
         text-align: center;
         display: block;
         font-weight: normal;
-        font-family: Verdana,Arial,sans-serif;
-        font-size: 14px;
-        color: #333;
+        color: #626262;
+        font-size: rem(14);
+        font-family: Arial;
     }
     .price-range-both {
         // display: block !important;

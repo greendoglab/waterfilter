@@ -339,8 +339,6 @@
 
         }
 
-        // // slider call
-
         $('#slider').slider({
             range: true,
             min: 0,
@@ -352,22 +350,10 @@
                 $('.ui-slider-handle:eq(1) .price-range-max').html(ui.values[ 1 ] + ' грн');
                 $('.price-range-both').html('<i>' + ui.values[ 0 ] + ' грн - ' + ui.values[ 1 ] + ' грн</i>');
 
-                //
-
-                // if ( ui.values[0] == ui.values[1] ) {
-                //     $('.price-range-both i').css('display', 'none');
-                // } else {
-                //     $('.price-range-both i').css('display', 'inline');
-                // }
-
-                //
-
                 if (collision($('.price-range-min'), $('.price-range-max')) == true) {
-                        $('.price-range-min, .price-range-max').css('opacity', '0');
-                        // $('.price-range-both').css('display', 'block');
+                    $('.price-range-min, .price-range-max').css('opacity', '0');
                 } else {
-                        $('.price-range-min, .price-range-max').css('opacity', '1');
-                        // $('.price-range-both').css('display', 'none');
+                    $('.price-range-min, .price-range-max').css('opacity', '1');
                 }
 
             }
