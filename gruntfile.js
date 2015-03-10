@@ -38,6 +38,7 @@ module.exports = function(grunt) {
             dist: {
                 src: [
                     'bower_components/jquery/dist/jquery.min.js',
+                    'bower_components/jquery-ui/jquery-ui.min.js',
                     'bower_components/jQuery-Mask-Plugin/dist/jquery.mask.min.js',
                     'src/assets/js/scripts.js'
                 ],
@@ -66,6 +67,13 @@ module.exports = function(grunt) {
         copy: {
             main: {
                 files: [
+                    // {
+                    //     expand: true,
+                    //     cwd: 'bower_components/jquery-ui',
+                    //     src: ['jquery-ui.min.js'],
+                    //     dest: 'production/static/css/',
+                    //     filter: 'isFile'
+                    // },
                     {
                         expand: true,
                         cwd: 'bower_components/normalize.css',
