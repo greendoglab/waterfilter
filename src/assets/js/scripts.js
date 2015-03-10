@@ -349,6 +349,7 @@
                 $('.ui-slider-handle:eq(0) .price-range-min').html(ui.values[ 0 ] + ' грн');
                 $('.ui-slider-handle:eq(1) .price-range-max').html(ui.values[ 1 ] + ' грн');
                 $('.price-range-both').html('<i>' + ui.values[ 0 ] + ' грн - ' + ui.values[ 1 ] + ' грн</i>');
+                $('#range-both').html(ui.values[ 0 ] + ' - ' + ui.values[ 1 ]);
 
                 if (collision($('.price-range-min'), $('.price-range-max')) == true) {
                     $('.price-range-min, .price-range-max').css('opacity', '0');
@@ -360,6 +361,8 @@
         });
 
         $('.ui-slider-range').append('<span class="price-range-both value"><i>' + $('#slider').slider('values', 0 ) + ' грн - ' + $('#slider').slider('values', 1 ) + ' грн</i></span>');
+
+        $('#range-both').append('<span class="price-range-both value">' + $('#slider').slider('values', 0 ) + ' - ' + $('#slider').slider('values', 1 ) + '</span>');
 
         $('.ui-slider-handle:eq(0)').append('<span class="price-range-min value">' + $('#slider').slider('values', 0 ) + ' грн</span>');
 
