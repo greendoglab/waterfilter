@@ -53,12 +53,10 @@
         var viewContainer = $('[data-role="filters-block"]');
         var viewTrigger = $('[data-role="filters-trigger"]');
 
-        viewContainer.show();
-
-        // viewTrigger.click(function() {
-        //     classCheck($(this) ,'active')
-        //     classCheck(viewContainer, 'state');
-        // });
+        viewTrigger.click(function() {
+            classCheck($(this) ,'active')
+            classCheck(viewContainer, 'state');
+        });
     }
 
     function filtersItems() {
