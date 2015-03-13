@@ -322,6 +322,7 @@
         elem.off();
     }
 
+    // Price range slider
     function priceRange() {
 
         function collision($div1, $div2) {
@@ -347,6 +348,8 @@
                 $('.ui-slider-handle:eq(0) .price-range-min').html(ui.values[ 0 ] + ' грн');
                 $('.ui-slider-handle:eq(1) .price-range-max').html(ui.values[ 1 ] + ' грн');
                 $('.price-range-both').html('<i>' + ui.values[ 0 ] + ' грн - ' + ui.values[ 1 ] + ' грн</i>');
+                $('.ui-slider-range').find('span.price-range-both').attr('data-lowprice', ui.values[ 0 ]);
+                $('.ui-slider-range').find('span.price-range-both').attr('data-highprice', ui.values[ 1 ]);
                 $('#range-both').html(ui.values[ 0 ] + ' - ' + ui.values[ 1 ]);
 
                 if (collision($('.price-range-min'), $('.price-range-max')) == true) {
@@ -359,6 +362,9 @@
         });
 
         $('.ui-slider-range').append('<span class="price-range-both value"><i>' + $('#slider').slider('values', 0 ) + ' грн - ' + $('#slider').slider('values', 1 ) + ' грн</i></span>');
+
+        $('.ui-slider-range').find('span.price-range-both').attr('data-lowprice', $('#slider').slider('values', 0 ));
+        $('.ui-slider-range').find('span.price-range-both').attr('data-highprice', $('#slider').slider('values', 1 ));
 
         $('#range-both').append('<span class="price-range-both value">' + $('#slider').slider('values', 0 ) + ' - ' + $('#slider').slider('values', 1 ) + '</span>');
 
